@@ -1,0 +1,12 @@
+{
+  "receivedTimestamp": "2017-10-17 16:37:42.355",
+  "processingTimeinMs": 77,
+  "resource": {
+    "decisionID": "ctc-vd-4b7197eb-157b-4e6f-9b87-5b0eaaf77638",
+    "decisionResponse": {
+      "shouldDecline": false,
+      "decisionResponseTimeStamp": "2017-10-17 16:37:42",
+      "responseMessage": "CARD_NOT_ENROLLED"
+    }
+  }
+}
