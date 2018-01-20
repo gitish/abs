@@ -28,9 +28,8 @@ db.on('error', function(err) {
 //mongoose.connect('mongodb://sarveshome:Bcamcaphd@761@ds159237.mlab.com:59237/awsnode');
 
 var help = require("./modules/help/help.js"),
-    users = require('./api/models/users.js'),
-
-    items = require('./api/models/dr.js');
+    users = require('./api/models/user.js'),
+    dr = require('./api/models/dr.js');
 
 
 app.set('port', (process.env.PORT || 3060));

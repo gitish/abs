@@ -8,34 +8,50 @@ var Schema = mongoose.Schema;
 
 
 var user = new Schema({
+    userId:{
+        type: String,
+        required: true,
+        unique: true
+    },
     name: String,
+    mobile:{
+        type: String,
+        required: true,
+        unique: true
+    },
     userType: {
         type: String,
-        enum: ["contractor", "owner","other"]
+        enum: ["patient", "doctor","compounder"],
+        default: "patient"
     },
     gender: {
         type: String,
         enum: ["male", "female"]
     },
+    address:String,
+    pin:Number,
+    nationality:{
+        type:String,
+        default:'Indian'
+    },
     email:String,
-    mobile:{
-        type: String,
-        required: true,
-        unique: true
+    dob: {
+        type: Date
     },
     otherContact:[String],
     password:{
         type:String,
         default:'password@123'
     },
-    Modified_date:{
+    image:String,
+    lastUpdated:{
         type:Date,
         default:Date.now
     },
     status: {
         type: [{
             type: String,
-            enum: ['registered', 'active', 'inactive','blocked']
+            enum: ['unregistered','registered', 'active', 'inactive','blocked']
         }],
         default: ['registered']
     }
@@ -45,5 +61,3 @@ module.exports = mongoose.model('user', user);
 /*
 add another schema here
  */
-
-
