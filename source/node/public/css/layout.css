@@ -7,7 +7,7 @@
 @import url("gallery.css");
 
 html{overflow-y:scroll;}
-body{margin:0; padding:0; font-size:11px; font-family:Georgia, "Times New Roman", Times, serif; color:#F8F8F2; background-color:#03274B;}
+body{margin:0; padding:0; font-family:Georgia, "Times New Roman", Times, serif; color:#F8F8F2; background-color:#03274B;}
 
 .justify{text-align:justify;}
 .bold{font-weight:bold;}
@@ -43,7 +43,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Generalise------------------------------------- */
 
-#header, #featured_slide, #container, #footer, #copyright{display:block; position:relative; width:960px; margin:0 auto;}
+#header, #featured_slide, #container, #footer, #copyright{display:block; position:relative; max-width:600px; margin:0 auto;}
 
 /* ----------------------------------------------Header------------------------------------- */
 

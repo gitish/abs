@@ -36,11 +36,11 @@ exports.get_dr = function(req, res) {
 exports.insert_new_dr = function(req, res) {
     var dr = new Dr(req.body);
     dr.last_updated = new Date();
-    dr.save(function(err) {
+    dr.save(function(err, result) {
         if (err) {
             res.send(err);
         }
-        res.json({ message: 'data save' });
+        res.json(result);
     })
 }
 

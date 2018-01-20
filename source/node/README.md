@@ -2,6 +2,7 @@
 ### Setup
 
 - Install Mondo DB
+- Robomongo
 - Install NPM
 - Fork this branch
 - If you are first time here then run (npm install)

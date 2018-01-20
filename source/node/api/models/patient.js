@@ -6,25 +6,20 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var dr = new Schema({
-    drId:String,
+var patient = new Schema({
+    patientId:String,
     userId:{
         type:Schema.Types.ObjectId,
         ref:"user"
     },
-    totalExperience:Number,
-    speciality:String,
-    place:String,
-    fee:Number,
-    availability:String,
-    image:String,
     lastUpdated: {
         type: Date,
         default:Date.now
     },
     status:Boolean
 });
+
 /*
 add another schema here
  */
-module.exports = mongoose.model('dr', dr);
+module.exports = mongoose.model('patient', patient);

@@ -3,12 +3,23 @@ Import/Export mongo collections
 Export Data
 =====================================================================
 mongoexport -d abs -c users -o D:\GitHub\abs\source\node\data\user-bk.json
+mongoexport -d abs -c drs -o D:\GitHub\abs\source\node\data\dr-bk.json
+
 
 Import Data
 =====================================================================
 mongoimport -d abs -c users --file D:\GitHub\abs\source\node\data\user-bk.json
+mongoexport -d abs -c drs -o D:\GitHub\abs\source\node\data\dr-bk.json
+
 
 Example
 =====================================================================
 https://www.mkyong.com/mongodb/mongodb-import-and-export-example/
 
+For Postman
+======================================================================
+check api.shl
+
+For manual Insert
+======================================================================
+Check db_file.txt under public/databaseFile
