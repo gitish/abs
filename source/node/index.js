@@ -13,14 +13,15 @@ mongoose.connect(config.database);
 
 let db = mongoose.connection;
 
-//Check connection
-db.open('open', function() {
-    console.log('Connection to MongoDB');
-});
-
-//Check db error
+//check db error
 db.on('error', function(err) {
     console.log(err);
+    process.exit();
+});
+
+//check connection
+db.once('open', function() {
+    console.log('connectio to mongodb');
 });
 
 
