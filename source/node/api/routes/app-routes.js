@@ -6,6 +6,7 @@
 module.exports = function(app) {
     var userController = require('../controllers/user-controller.js');
     var drController = require('../controllers/dr-controller.js');
+    var PatientController = require('../controllers/patient.controller');
 	/*
     var locationController = require('../controllers/location-controller.js');
 	*/
@@ -31,5 +32,6 @@ module.exports = function(app) {
         .put(drController.update_a_dr)
         .delete(drController.delete_a_dr);
     
-    
+    app.route('/patient')
+        .post(PatientController.createPatient);
 };

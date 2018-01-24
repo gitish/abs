@@ -21,8 +21,9 @@ db.on('error', function(err) {
 
 //check connection
 db.once('open', function() {
-    console.log('connectio to mongodb');
+    console.log('connection to mongodb');
 });
+
 
 
 //mongoose.connect('mongodb://localhost/eqs');
@@ -31,7 +32,7 @@ db.once('open', function() {
 var help = require("./modules/help/help.js"),
     users = require('./api/models/user.js'),
     dr = require('./api/models/dr.js');
-
+    patient = require('./api/models/patient.model');
 
 app.set('port', (process.env.PORT || 3060));
 app.use(bodyParser.urlencoded({ extended: false }));
