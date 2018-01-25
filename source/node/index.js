@@ -23,11 +23,15 @@ db.on('error', function(err) {
 db.once('open', function() {
     console.log('connection to mongodb');
 });
-
-
-
-//mongoose.connect('mongodb://localhost/eqs');
-//mongoose.connect('mongodb://sarveshome:Bcamcaphd@761@ds159237.mlab.com:59237/awsnode');
+/**
+ * Enabling CORS(Cross Origin Resource Sharing) on Node 
+ */
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    next();
+  });
 
 var help = require("./modules/help/help.js"),
     users = require('./api/models/user.js'),
