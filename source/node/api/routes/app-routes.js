@@ -33,5 +33,7 @@ module.exports = function(app) {
         .delete(drController.delete_a_dr);
     
     app.route('/patient')
-        .post(PatientController.createPatient);
+        .get(PatientController.getPatient)
+        .post(PatientController.createPatient)
+        .put(PatientController.updatePatient);
 };
