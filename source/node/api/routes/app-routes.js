@@ -34,6 +34,10 @@ module.exports = function(app) {
     
     app.route('/patient')
         .get(PatientController.getPatient)
-        .post(PatientController.createPatient)
-        .put(PatientController.updatePatient);
+        .post(PatientController.createPatient);
+
+    app.route('/patient/:patientid')
+        .get(PatientController.getPatient)
+        .put(PatientController.updatePatient)
+        .delete(PatientController.deletePatient);
 };
