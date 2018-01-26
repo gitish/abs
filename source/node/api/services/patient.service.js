@@ -47,7 +47,7 @@ exports.updatePatient = async function (patient) {
 
     console.log(oldPatient);
 
-    oldPatient.patientId= patient.patientId;
+    //oldPatient.patientId= patient.patientId;
     oldPatient.userId =  patient.userId;
 
     console.log(oldPatient);
@@ -63,10 +63,13 @@ exports.updatePatient = async function (patient) {
 }
 
 exports.deletePatient = async function (patientId) {
+    //console.log(patientId);
     try {
-        var deletedPatient = await Patient.remove({_patient : patientId});
-        
+        var deletedPatient = await Patient.remove({patientId : patientId});
+        if (deletedPatient.result.n==0) {
+            throw Error('Patient could not deleted');
+        }
     } catch (e) {
-        
+        throw Error('Error Occured while deleting the patient'+e.message);
     }
 }
