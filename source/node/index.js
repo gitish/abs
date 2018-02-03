@@ -3,6 +3,7 @@ var http = require('http'),
     express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
+    passport = require('passport');
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
@@ -42,8 +43,15 @@ app.set('port', (process.env.PORT || 3060));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
+
+
 var home = function(req, resp) {
-    fs.readFile("./index.html", function(err, data) {
+    fs.readFile("./public/dist/index.html", function(err, data) {
         resp.writeHeader(200, { "Content-Type": "text/html" });
         resp.write(data);
         resp.end();
@@ -57,7 +65,7 @@ routes(app);
 general routes and UI path
  */
 app.get("/help", help.f1);
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/dist/'));
 
 /*
 finally start the server

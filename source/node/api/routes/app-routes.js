@@ -16,6 +16,10 @@ module.exports = function(app) {
         .post(userController.create_new_user)
         .put(userController.update_user)
         .delete(userController.invalidate_user);
+    app.route('/user/register')       
+        .post(userController.create_new_user)
+    // Authenticate
+    app.post('/user/authenticate', userController.authenticateUser );
 
     app.route('/user/:userId')
         .get(userController.get_users);
@@ -40,4 +44,14 @@ module.exports = function(app) {
         .get(PatientController.getPatient)
         .put(PatientController.updatePatient)
         .delete(PatientController.deletePatient);
+
+    
+        
+        // Profile
+        // app.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+        //     res.json({user: req.user});
+        // });
 };
+
+
+  
