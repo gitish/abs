@@ -39,20 +39,13 @@ export class RegisterComponent implements OnInit {
       name: this.name,
       mobile: this.mobile,
       userType: this.userType,
-      gender: this.gender,
-      address: this.address,
-      pin: this.pin,
-      nationality: this.nationality,
       email: this.email,
-      dob: this.dob,
-      otherContact: this.otherContact,
-      username: this.username,
-      password: this.password,
-      image: this.image
+      password: this.password
     }
 
     // Required Fields
     if (!this.validateService.validateRegister(user)) {
+      console.log(user);
       this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
       return false;
     }

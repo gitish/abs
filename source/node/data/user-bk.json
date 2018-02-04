@@ -1,1 +1,23 @@
-{ "_id" : { "$oid" : "5a63c34ba36b0d3b8850374a" }, "userId" : "U000001", "name" : "Dr. suresh prasad", "mobile" : "012324343244", "gender" : "male", "address" : "Bhagalpur", "pin" : 812001, "dob" : { "$date" : "2018-03-01T00:00:00.000+0000" }, "image" : "images/suresh.png", "status" : [ "unregistered" ], "lastUpdated" : { "$date" : "2018-01-20T22:31:39.099+0000" }, "password" : "s3cr3t", "otherContact" : [], "nationality" : "Indian", "userType" : "patient", "__v" : 0 }
+{ 
+    "_id" : ObjectId("5a754efc44b582265ce2f5a2"), 
+    "userId" : "1517637372705", 
+    "name" : "shail", 
+    "mobile" : "9871355761", 
+    "gender" : "male", 
+    "address" : "uk", 
+    "pin" : NumberInt(110089), 
+    "email" : "mr.shailendra.shail@gmail.com", 
+    "dob" : ISODate("2017-04-03T00:00:00.000+0000"), 
+    "image" : "imm", 
+    "status" : [
+        "registered"
+    ], 
+    "lastUpdated" : ISODate("2018-02-03T05:56:12.720+0000"), 
+    "password" : "$2a$10$V7NVa.ZrOnNTo97OiK0dNu4CK0hGMaytEojYOVNv3n9zmYLzFvrHO", 
+    "otherContact" : [
+        "9871355761"
+    ], 
+    "nationality" : "uk", 
+    "userType" : "patient", 
+    "__v" : NumberInt(0)
+}

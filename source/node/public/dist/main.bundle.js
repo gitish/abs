@@ -507,6 +507,7 @@ var ProfileComponent = /** @class */ (function () {
     ProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authService.getProfile().subscribe(function (profile) {
+            console.log('profileuser');
             _this.user = profile.user;
         }, function (err) {
             console.log(err);
@@ -549,7 +550,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h2 class=\"page-header\">Register</h2>\n  <form (submit)=\"onRegisterSubmit()\" >\n    <div class=\"form-group\">\n      <label for=\"name\">Name</label>\n      <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Enter Name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"mobile\">mobile</label>\n      <input type=\"text\" [(ngModel)]=\"mobile\" name=\"mobile\" class=\"form-control\" id=\"mobile\" placeholder=\"Enter mobile\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"userType\">userType</label>\n      <input type=\"text\" [(ngModel)]=\"userType\" name=\"userType\" class=\"form-control\" id=\"userType\" placeholder=\"Enter userType\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"gender\">gender</label>\n      <input type=\"text\" [(ngModel)]=\"gender\" name=\"gender\" class=\"form-control\" id=\"gender\" placeholder=\"Enter gender\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"address\">address</label>\n      <input type=\"text\" [(ngModel)]=\"address\" name=\"address\" class=\"form-control\" id=\"address\" placeholder=\"Enter address\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"username\">Username</label>\n      <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\" id=\"username\" placeholder=\"Enter Username\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"pin\">pin</label>\n      <input type=\"text\" [(ngModel)]=\"pin\" name=\"pin\" class=\"form-control\" id=\"pin\" placeholder=\"Enter pin\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"nationality\">nationality</label>\n      <input type=\"text\" [(ngModel)]=\"nationality\" name=\"nationality\" class=\"form-control\" id=\"nationality\" placeholder=\"Enter nationality\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"email\">Email</label>\n      <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n      <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"dob\">dob</label>\n      <input type=\"text\" [(ngModel)]=\"dob\" name=\"dob\" class=\"form-control\" id=\"dob\" placeholder=\"Enter dob\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"otherContact\">otherContact</label>\n      <input type=\"text\" [(ngModel)]=\"otherContact\" name=\"otherContact\" class=\"form-control\" id=\"otherContact\" placeholder=\"Enter otherContact\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"password\">Password</label>\n      <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" id=\"password\" placeholder=\" Enter Password\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"image\">image</label>\n      <input type=\"text\" [(ngModel)]=\"image\" name=\"image\" class=\"form-control\" id=\"image\" placeholder=\"Enter image\">\n    </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n  </form>\n  </div>\n"
+module.exports = "<div>\n  <h2 class=\"page-header\">Register</h2>\n  <form (submit)=\"onRegisterSubmit()\" >\n    <div class=\"form-group\">\n      <label for=\"name\">Name</label>\n      <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Enter Name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"mobile\">mobile</label>\n      <input type=\"text\" [(ngModel)]=\"mobile\" name=\"mobile\" class=\"form-control\" id=\"mobile\" placeholder=\"Enter mobile\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"userType\">userType</label>\n      <input type=\"text\" [(ngModel)]=\"userType\" name=\"userType\" class=\"form-control\" id=\"userType\" placeholder=\"Enter userType\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">Email</label>\n      <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\n      <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"password\">Password</label>\n      <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" id=\"password\" placeholder=\" Enter Password\">\n    </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n  </form>\n  </div>\n"
 
 /***/ }),
 
@@ -594,19 +595,12 @@ var RegisterComponent = /** @class */ (function () {
             name: this.name,
             mobile: this.mobile,
             userType: this.userType,
-            gender: this.gender,
-            address: this.address,
-            pin: this.pin,
-            nationality: this.nationality,
             email: this.email,
-            dob: this.dob,
-            otherContact: this.otherContact,
-            username: this.username,
-            password: this.password,
-            image: this.image
+            password: this.password
         };
         // Required Fields
         if (!this.validateService.validateRegister(user)) {
+            console.log(user);
             this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
             return false;
         }
@@ -718,7 +712,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
-        //this.isDev = true;  // Change to false before deployment
+        //this.isDev = false;  // Change to false before deployment
     }
     AuthService.prototype.registerUser = function (user) {
         console.log(user);
@@ -735,11 +729,11 @@ var AuthService = /** @class */ (function () {
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getProfile = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
-        headers.append('Authorization', this.authToken);
-        headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3060/user/profile', { headers: headers })
+        headers1.append('Authorization', this.authToken);
+        headers1.append('Content-Type', 'application/json');
+        return this.http.get('http://localhost:3060/user/profile', { headers: headers1 })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.storeUserData = function (token, user) {
@@ -791,7 +785,7 @@ var ValidateService = /** @class */ (function () {
     function ValidateService() {
     }
     ValidateService.prototype.validateRegister = function (user) {
-        if (user.name == undefined || user.email == undefined || user.username == undefined || user.password == undefined) {
+        if (user.name == undefined || user.email == undefined || user.password == undefined) {
             return false;
         }
         else {
