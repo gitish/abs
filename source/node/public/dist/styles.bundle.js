@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nbody{\n  margin-top:70px;\n}\n\n@media(max-width: 768px){\n  body{\n    margin-top:180px;\n   }\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody{\r\n  margin-top:70px;\r\n}\r\n\r\n@media(max-width: 768px){\r\n  body{\r\n    margin-top:180px;\r\n   }\r\n}\r\n", ""]);
 
 // exports
 
