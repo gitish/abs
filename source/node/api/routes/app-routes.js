@@ -7,6 +7,7 @@ module.exports = function(app) {
     var userController = require('../controllers/user-controller.js');
     var drController = require('../controllers/dr-controller.js');
     var PatientController = require('../controllers/patient.controller');
+    const passport = require('passport');
 	/*
     var locationController = require('../controllers/location-controller.js');
 	*/
@@ -20,7 +21,8 @@ module.exports = function(app) {
         .post(userController.create_new_user)
     // Authenticate
     app.post('/user/authenticate', userController.authenticateUser );
-
+    //  Profile
+    app.route('/user/profile', userController.profile);
     app.route('/user/:userId')
         .get(userController.get_users);
 
@@ -47,10 +49,7 @@ module.exports = function(app) {
 
     
         
-        // Profile
-        // app.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
-        //     res.json({user: req.user});
-        // });
+     
 };
 
 

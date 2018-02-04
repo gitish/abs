@@ -82,6 +82,12 @@ exports.authenticateUser = (req, res, next) => {
     });
 }
 
+exports.profile = function(req,res,next){
+    console.log('request in profile');
+    passport.authenticate('jwt', {session:false}), (req, res, next) => {
+        res.json({user: req.user});//
+    }
+}
 
 exports.update_user = function(req, res) {
     console.log("put with requestId in path")

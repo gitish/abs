@@ -3,8 +3,9 @@ var http = require('http'),
     express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
-    passport = require('passport');
-    bodyParser = require('body-parser');
+    passport = require('passport'),
+    bodyParser = require('body-parser')
+    cors = require('cors');
 
 mongoose.Promise = global.Promise;
 
@@ -66,7 +67,7 @@ general routes and UI path
  */
 app.get("/help", help.f1);
 app.use(express.static(__dirname + '/public/dist/'));
-
+app.use(cors());
 /*
 finally start the server
  */

@@ -20,3 +20,8 @@
 	https://localhost:3060
 	http://localhost:3060/user
 
+
+--install node.js latest version
+
+-- Userid 9871355761
+-- passsword password@761

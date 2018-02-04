@@ -10,7 +10,7 @@ export class AuthService {
   user: any;
 
   constructor(private http: Http) {
-      //this.isDev = true;  // Change to false before deployment
+       //this.isDev = false;  // Change to false before deployment
       }
 
   registerUser(user) {
@@ -30,11 +30,11 @@ export class AuthService {
   }
 
   getProfile() {
-    let headers = new Headers();
+    const headers1 = new Headers();
     this.loadToken();
-    headers.append('Authorization', this.authToken);
-    headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3060/user/profile', {headers: headers})
+    headers1.append('Authorization', this.authToken);
+    headers1.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3060/user/profile', {headers: headers1})
       .map(res => res.json());
   }
 
