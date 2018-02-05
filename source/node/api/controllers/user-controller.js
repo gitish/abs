@@ -82,7 +82,7 @@ exports.authenticateUser = (req, res, next) => {
     });
 }
 
-exports.profile = function(req,res,next){
+exports.profile = (req, res, next) => {
     console.log('request in profile');
     passport.authenticate('jwt', {session:false}), (req, res, next) => {
         res.json({user: req.user});//
