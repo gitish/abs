@@ -22,7 +22,10 @@ module.exports = function(app) {
     // Authenticate
     app.post('/user/authenticate', userController.authenticateUser );
     //  Profile
-    app.route('/user/profile', userController.profile);
+    app.get('/user/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+        console.log('profile request');
+        res.json({user: req.user});
+      });
     app.route('/user/:userId')
         .get(userController.get_users);
 
