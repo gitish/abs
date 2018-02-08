@@ -1,7 +1,130 @@
-<div *ngIf="user">
-  <h2 class="page-header">{{user.name}}</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Username : {{user.name}}</li>
-    <li class="list-group-item">Email : {{user.email}}</li>
-  </ul>
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Profile</h4>
+         <p class="w3-center"><img src="assets/images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <div *ngIf="user">
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Name : {{user.name}}</p>
+         <p><i class="fa fa-envelope-square fa-fw w3-margin-right w3-text-theme"></i>{{user.email}}</p>
+         <p><i class="fa fa-mobile fa-fw w3-margin-right w3-text-theme"></i> {{user.mobile}} </p>
+        </div>
+        </div>
+      </div>
+      <br>
+
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button (click)="myFunction('Details1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Details</button>
+          <div id="Details1" class="w3-hide w3-container">
+            <p>..</p>
+          </div>
+          <button (click)="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Appointment History</button>
+          <div id="Demo2" class="w3-hide w3-container">
+            <p>..</p>
+          </div>
+          <button (click)="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Medical Record</button>
+          <div id="Demo3" class="w3-hide w3-container">
+              <div class="w3-row-padding">
+               <br>
+                <div class="w3-half">
+                  <!-- <img src="assets/images/abc.jpg" style="width:100%" class="w3-margin-bottom"> -->
+                </div>
+              </div>
+          </div>
+          <button (click)="myFunction('Demo4')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i>My Dependants and Carers</button>
+          <div id="Demo4" class="w3-hide w3-container">
+            <p>..</p>
+          </div>
+          <button (click)="myFunction('Demo5')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-user-md fa-fw w3-margin-right"></i>My Surgery</button>
+          <div id="Demo5" class="w3-hide w3-container">
+            <p>..</p>
+          </div>
+
+        </div>
+      </div>
+      <br>
+
+
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">
+                  Detail Profile
+              </h6>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+
+        <span class="w3-right w3-opacity"></span>
+
+
+      </div> -->
+
+
+
+
+
+    <!-- End Middle Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <img src="assets/images/avatar3.png" alt="Forest" style="width:100%;">
+          <p><strong></strong></p>
+          <p></p>
+          <p><button class="w3-button w3-block w3-theme-l4"></button></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+<!-- End Page Container -->
 </div>
+<br>
