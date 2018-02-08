@@ -30,11 +30,11 @@ export class AuthService {
   }
 
   getProfile() {
-    const headers1 = new Headers();
+    const headersProfile = new Headers();
     this.loadToken();
-    headers1.append('Authorization', this.authToken);
-    headers1.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3060/user/profile', {headers: headers1})
+    headersProfile.append('Authorization', this.authToken);
+    headersProfile.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3060/user/profile', {headers: headersProfile})
       .map(res => res.json());
   }
 
