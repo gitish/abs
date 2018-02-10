@@ -23,7 +23,7 @@ mongoexport -d abs -c drs -o D:\GitHub\abs\source\node\data\dr-bk.json
 ```
 
 ### Server setup and execute
-```
+```sh
 cd source/node/
 npm install
 nodemon index.js 
