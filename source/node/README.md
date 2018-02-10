@@ -56,9 +56,10 @@ ng serve -- For run locally
 ng build -- to make file for server (above)
 ```
 Note : If your application is not starting and giving async error then either your node and npm is latest (Resolution below)
-| Sl.No | Solution |
-| ------ | ------ |
-| 1 | Install latest node and npm|
-| 2 | Remove async and await from all files |
+
+| Sl.No  | Solution                              |
+| ------ | ------                                |
+| 1      | Install latest node and npm           |
+| 2      | Remove async and await from all files |
 
 
