@@ -1,5 +1,3 @@
-# Appointment Booking : Appointment, Report
-### Setup
 # ABS
 Appointment Booking System.
 
