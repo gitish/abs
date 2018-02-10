@@ -30,14 +30,14 @@ nodemon index.js
 #OR
 node index.js
 ```
-- it should prompt you as below
+- it should prompt you as below,
         Server listening to port : 3060
 	
 #### Execution
 Home location : http://localhost:3060
-Register user first 
-and then login 
-you can view dashboard and profile
+- Register user first 
+- and then login 
+- you can view dashboard and profile
 
 | F | URL |
 | ------ | ------ |
@@ -46,7 +46,7 @@ you can view dashboard and profile
 
 ### Client Setup and Execution
 
-```
+```sh
 cd source/client/ABS
 npm install
 ng serve -- For run locally
