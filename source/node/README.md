@@ -49,9 +49,9 @@ Home location : http://localhost:3060
 ```sh
 cd source/client/ABS
 npm install
-ng serve -- For run locally
+`ng serve --o`     -- For run locally
 #OR
-ng build -- to make file for server (above)
+`ng build`          -- to make file for server (above)
 ```
 Note : If your application is not starting and giving async error then either your node and npm is latest (Resolution below)
 
