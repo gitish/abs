@@ -24,6 +24,7 @@ export class RegisterComponent implements OnInit {
   otherContact: String;
   password: String;
   image: String;
+  typeofUsers;
   constructor(
     private validateService: ValidateService,
     private authService: AuthService,
@@ -31,6 +32,8 @@ export class RegisterComponent implements OnInit {
     private flashMessage: FlashMessagesService) { }
 
   ngOnInit() {
+    this.typeofUsers =[
+      {name:'Patient',value:'patient'}, {name:'Doctor',value:'doctor'},{name:'Compounder',value:'compounder'}]
   }
 
   onRegisterSubmit() {
@@ -45,7 +48,6 @@ export class RegisterComponent implements OnInit {
 
     // Required Fields
     if (!this.validateService.validateRegister(user)) {
-      console.log(user);
       this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
       return false;
     }

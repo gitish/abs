@@ -11,7 +11,10 @@
     </div>
     <div class="form-group">
       <label for="userType">userType</label>
-      <input type="text" [(ngModel)]="userType" name="userType" class="form-control" id="userType" placeholder="Enter userType">
+      <select class="form-control" [(ngModel)]="userType" name="userType" id="userType">
+        <option *ngFor="let typeofUser of typeofUsers" value="{{typeofUser.value}}">{{typeofUser.name}}</option>
+      </select>
+      <!-- <input type="text"  class="form-control"  placeholder="Enter userType"> -->
     </div>
     <div class="form-group">
       <label for="email">Email</label>
