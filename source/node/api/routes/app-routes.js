@@ -19,6 +19,10 @@ module.exports = function(app) {
         .delete(userController.invalidate_user);
     app.route('/user/register')       
         .post(userController.create_new_user)
+    app.route('/user/createProfile')       
+        .post(userController.create_new_profile);
+    app.route('/user/profileList/:email')       
+        .get(userController.get_all_profile);
     // Authenticate
     app.post('/user/authenticate', userController.authenticateUser );
     //  Profile
