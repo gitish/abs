@@ -17,8 +17,7 @@ var UserSchema = new Schema({
     name: String,
     mobile:{
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     userType: {
         type: String,

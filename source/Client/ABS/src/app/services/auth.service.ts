@@ -59,4 +59,16 @@ export class AuthService {
     this.user = null;
     localStorage.clear();
   }
+  createProfile(profile) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3060/user/createProfile', profile, {headers: headers})
+      .map(res => res.json());
+  }
+  getChildUser(data) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3060/user/profileList/'+data.email, {headers: headers})
+      .map(res => res.json());
+  }
 }

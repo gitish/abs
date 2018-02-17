@@ -72,7 +72,8 @@ exports.authenticateUser = (req, res, next) => {
                         id: user._id,
                         name: user.name,
                         username: user.username,
-                        email: user.email
+                        email: user.email,
+                        mobile: user.mobile
                     }
                 })
             } else {
@@ -81,6 +82,41 @@ exports.authenticateUser = (req, res, next) => {
         });
     });
 }
+
+exports.create_new_profile = function (req, res,next) {
+    var data = req.body;
+    User.create(data,function (err, result) {
+        if (err) {
+            return  res.json({success: false, msg: 'Failed to Create Profile'});
+        }
+        return  res.json({success: true, msg: 'User Created'});
+    });
+};
+
+exports.get_all_profile = function (req, res,next) {
+    var email = req.params.email;
+    var data = [];
+    User.find({
+        'email':req.params.email
+    },function(err,result){
+        if(err){
+            res.send(err)
+        }else{
+            _.forEach(result,function(row){
+                var profileInfo = {}
+                profileInfo.email = row._doc.email;
+                profileInfo.gender = row._doc.gender;
+                profileInfo.mobile = row._doc.mobile;
+                profileInfo.name = row._doc.name;
+                profileInfo.userId = row._doc.userId;
+                profileInfo.userType = row._doc.userType;
+                profileInfo.dob = row._doc.dob;
+                data.push(profileInfo)
+            })
+            res.send(data);
+        }
+    })
+};
 
 exports.profile = function(req,res,next){
     console.log('request in profile');

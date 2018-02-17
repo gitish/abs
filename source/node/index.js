@@ -11,9 +11,10 @@ mongoose.Promise = global.Promise;
 
 
 const config = require('./config/database');
-mongoose.connect(config.database);
+mongoose.connect(config.database,{ useMongoClient: true });
 
-let db = mongoose.connection;
+global.db = mongoose.connection;
+global._ = require('lodash');
 
 //check db error
 db.on('error', function(err) {
