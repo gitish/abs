@@ -1,5 +1,3 @@
-# Appointment Booking : Appointment, Report
-### Setup
 # ABS
 Appointment Booking System.
 
@@ -25,21 +23,21 @@ mongoexport -d abs -c drs -o D:\GitHub\abs\source\node\data\dr-bk.json
 ```
 
 ### Server setup and execute
-```
+```sh
 cd source/node/
 npm install
 nodemon index.js 
 #OR
 node index.js
 ```
-- it should prompt you as below
+- it should prompt you as below,
         Server listening to port : 3060
 	
 #### Execution
 Home location : http://localhost:3060
-Register user first 
-and then login 
-you can view dashboard and profile
+- Register user first 
+- and then login 
+- you can view dashboard and profile
 
 | F | URL |
 | ------ | ------ |
@@ -48,17 +46,19 @@ you can view dashboard and profile
 
 ### Client Setup and Execution
 
-```
+```sh
 cd source/client/ABS
 npm install
-ng serve -- For run locally
+
+ng serve --o     -- For run locally
 #OR
-ng build -- to make file for server (above)
-```
+ng build          -- to make file for server (above)
+
 Note : If your application is not starting and giving async error then either your node and npm is latest (Resolution below)
-| Sl.No | Solution |
-| ------ | ------ |
-| 1 | Install latest node and npm|
-| 2 | Remove async and await from all files |
+
+| Sl.No  | Solution                              |
+| ------ | ------                                |
+| 1      | Install latest node and npm           |
+| 2      | Remove async and await from all files |
 
 
