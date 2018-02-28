@@ -5,10 +5,21 @@ _this = this;
 exports.createPatient = async function(req,res,next)
 {
     var patient={
-        patientId : req.body.patientId,
-        userId: req.body.userId
+        patientid: req.body.patientid,
+        patientname: req.body.patientname,
+        email: req.body.email,
+        dob : req.body.dob,
+        mobile: req.body.mobile,
+        gender: req.body.gender,
+        // nationality: req.body.nationality,
+        address : req.body.address,
+        pin: req.body.pin,
+        image: req.body.image,
+        FkRegistrationID: req.body.fkRegistrationid
+              
     }
-
+    console.log('server request add new patient');
+    console.log(patient);
     try {
         // Calling the Service function with the new object from the Request Body
         var createdPatient = await PatientService.createPatient(patient);

@@ -18,6 +18,14 @@ import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 
+
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { CommonModule } from '@angular/common';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule } from '@angular/material';
+
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
@@ -40,6 +48,14 @@ const appRoutes: Routes =  [
     BrowserModule,
     FormsModule,
     HttpModule,
+
+    MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot()
   ],
