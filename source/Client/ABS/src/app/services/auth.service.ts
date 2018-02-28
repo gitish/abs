@@ -6,18 +6,22 @@ import { tokenNotExpired } from 'angular2-jwt';
 
 @Injectable()
 export class AuthService {
+  api_url = 'http://localhost:3060';
+
+
   authToken: any;
   user: any;
-
+  profile: any;
   constructor(private http: Http) {
-       //this.isDev = false;  // Change to false before deployment
+       //this.isDev = true;  // Change to false before deployment
       }
-
+//#region "User "
   registerUser(user) {
     console.log(user);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3060/user/register', user, {headers: headers})
+    const userregisterUrl = `${this.api_url}/user/register`;
+    return this.http.post(userregisterUrl, user, {headers: headers})
       .map(res => res.json());
   }
 
@@ -28,16 +32,28 @@ export class AuthService {
     return this.http.post('http://localhost:3060/user/authenticate', user, {headers: headers})
       .map(res => res.json());
   }
-
-  getProfile() {
+//#endregion "*****"
+//#region "Profile"
+getProfile() {
     const headersProfile = new Headers();
     this.loadToken();
     headersProfile.append('Authorization', this.authToken);
     headersProfile.append('Content-Type', 'application/json');
     return this.http.get('http://localhost:3060/user/profile', {headers: headersProfile})
       .map(res => res.json());
-  }
+}
+createnewProfile(profile) {
+  const headersNewProfile = new Headers();
+  console.log(profile);
+  headersNewProfile.append('Content-Type', 'application/json');
+  const profileUrl = `${this.api_url}/patient`;
+  console.log(profileUrl);
+  return this.http.post(profileUrl, profile, {headers: headersNewProfile})
+   .map(res => res.json());
+}
 
+//#endregion "profile"
+//#region "token"
   storeUserData(token, user) {
     localStorage.setItem('id_token', token);
     localStorage.setItem('user', JSON.stringify(user));
@@ -59,4 +75,5 @@ export class AuthService {
     this.user = null;
     localStorage.clear();
   }
+  //#endregion "****"
 }

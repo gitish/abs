@@ -6,8 +6,16 @@ _this = this;
 exports.createPatient = async function (patient) {
     
     var newPatient = new Patient({
-        patientId : patient.patientId,
-        userId: patient.userId,
+        patientid : patient.patientid,
+        patientname: patient.patientname,
+        email: patient.email,
+        dob : patient.dob,
+        gender : patient.gender,
+        nationality: patient.nationality,
+        address: patient.address,
+        pin : patient.pin,
+        image: patient.image,
+        FkRegistrationID: patient.FkRegistrationID,
         lastUpdated : new Date(),
         status: true
     });

@@ -11,8 +11,8 @@ mongoose.Promise = global.Promise;
 
 
 const config = require('./config/database');
-mongoose.connect(config.database);
-
+mongoose.connect(config.database,{ useMongoClient: true });
+//mongoose.createConnection(config.database);
 let db = mongoose.connection;
 
 //check db error
@@ -25,6 +25,7 @@ db.on('error', function(err) {
 db.once('open', function() {
     console.log('connection to mongodb');
 });
+
 /**
  * Enabling CORS(Cross Origin Resource Sharing) on Node 
  */
