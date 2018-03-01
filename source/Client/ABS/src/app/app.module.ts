@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 
-
+import { MaterialModule } from './module/material.module';
+import { MatDatepickerIntl } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -18,13 +19,9 @@ import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 
-
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule } from '@angular/material';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
@@ -48,18 +45,12 @@ const appRoutes: Routes =  [
     BrowserModule,
     FormsModule,
     HttpModule,
-
-    MatCheckboxModule,
+    MaterialModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatIconModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot()
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard, MatDatepickerIntl],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
