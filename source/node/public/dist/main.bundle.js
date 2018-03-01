@@ -72,20 +72,21 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_dashboard_dashboard_component__ = __webpack_require__("./src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__ = __webpack_require__("./src/app/components/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_navbar_navbar_component__ = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_profile_profile_component__ = __webpack_require__("./src/app/components/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__module_material_module__ = __webpack_require__("./src/app/module/material.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__ = __webpack_require__("./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__ = __webpack_require__("./src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_navbar_navbar_component__ = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__ = __webpack_require__("./src/app/components/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,11 +113,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_6__components_home_home_component__["a" /* HomeComponent */] },
-    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__["a" /* RegisterComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__["a" /* LoginComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_7__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_10__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__["a" /* AuthGuard */]] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__["a" /* HomeComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_13__components_register_register_component__["a" /* RegisterComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -124,30 +125,25 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_navbar_navbar_component__["a" /* NavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__["a" /* RegisterComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_navbar_navbar_component__["a" /* NavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_register_register_component__["a" /* RegisterComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["c" /* MatCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_16__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["a" /* MatButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["e" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["b" /* MatCardModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["f" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["d" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_5__module_material_module__["a" /* MaterialModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_14_angular2_flash_messages__["FlashMessagesModule"].forRoot()
+                __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__["FlashMessagesModule"].forRoot()
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_12__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_13__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__["a" /* AuthGuard */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_14__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_6__angular_material__["d" /* MatDatepickerIntl */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -421,7 +417,7 @@ module.exports = "/* W3.CSS 4.09 January 2018 by Jan Egil and Borge Refsnes */\r
 /***/ "./src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Container -->\r\n<div class=\"w3-container w3-content\" style=\"max-width:1400px;margin-top:80px\">\r\n  <!-- The Grid -->\r\n  <div class=\"w3-row\">\r\n    <!-- Left Column -->\r\n    <div class=\"w3-col m3\">\r\n      <!-- Profile -->\r\n      <div class=\"w3-card w3-round w3-white\">\r\n        <div class=\"w3-container\">\r\n         <h4 class=\"w3-center\">Profile</h4>\r\n         <p class=\"w3-center\"><img src=\"assets/images/avatar3.png\" class=\"w3-circle\" style=\"height:106px;width:106px\" alt=\"Avatar\"></p>\r\n         <hr>\r\n         <div *ngIf=\"user\">\r\n         <p><i class=\"fa fa-pencil fa-fw w3-margin-right w3-text-theme\"></i> Name : {{user.name}}</p>\r\n         <p><i class=\"fa fa-envelope-square fa-fw w3-margin-right w3-text-theme\"></i>{{user.email}}</p>\r\n         <p><i class=\"fa fa-mobile fa-fw w3-margin-right w3-text-theme\"></i> {{user.mobile}} </p>\r\n        </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <!-- Accordion -->\r\n      <div class=\"w3-card w3-round\">\r\n        <div class=\"w3-white\">\r\n          <button (click)=\"myFunction('Details1')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-circle-o-notch fa-fw w3-margin-right\"></i> My Details</button>\r\n          <div id=\"Details1\" class=\"w3-hide w3-container\">\r\n            <p>\r\n              <button (click)=\"addProfileUser()\" class=\"\">\r\n              <i class=\"fa fa-user-plus\"></i>\r\n              </button>\r\n              <i class=\"fa fa-user\"></i>\r\n            </p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo2')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i> Appointment History</button>\r\n          <div id=\"Demo2\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo3')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-users fa-fw w3-margin-right\"></i> My Medical Record</button>\r\n          <div id=\"Demo3\" class=\"w3-hide w3-container\">\r\n              <div class=\"w3-row-padding\">\r\n               <br>\r\n                <div class=\"w3-half\">\r\n                  <!-- <img src=\"assets/images/abc.jpg\" style=\"width:100%\" class=\"w3-margin-bottom\"> -->\r\n                </div>\r\n              </div>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo4')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i>My Dependants and Carers</button>\r\n          <div id=\"Demo4\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo5')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-user-md fa-fw w3-margin-right\"></i>My Surgery</button>\r\n          <div id=\"Demo5\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n    <!-- End Left Column -->\r\n    </div>\r\n\r\n    <!-- Middle Column -->\r\n    <div class=\"w3-col m7\">\r\n\r\n      <div class=\"w3-row-padding\">\r\n        <div class=\"w3-col m12\">\r\n          <div class=\"w3-card w3-round w3-white\">\r\n            <div *ngIf=\"showSelected\" class=\"w3-container w3-padding\">\r\n              <h6 class=\"w3-opacity\">\r\n                  add Profile\r\n              </h6>\r\n              <form (submit)=\"onProfileSubmit()\" >\r\n              <div class=\"form-group\">\r\n                <label for=\"name\">Name</label>\r\n                <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Enter Name\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"mobile\">mobile</label>\r\n                <input type=\"text\" [(ngModel)]=\"mobile\" name=\"mobile\" class=\"form-control\" id=\"mobile\" placeholder=\"Enter mobile\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"mobile\">Date</label>\r\n                <!-- <mat-form-field class=\"example-full-width\">\r\n                  <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker touchUi=\"true\" #picker></mat-datepicker>\r\n                </mat-form-field> -->\r\n\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"email\">Email</label>\r\n                <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"gender\">gender</label>\r\n                <input type=\"text\" [(ngModel)]=\"gender\" name=\"gender\" class=\"form-control\" id=\"gender\" placeholder=\"Enter gender\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Address\">Address</label>\r\n                <input type=\"text\" [(ngModel)]=\"Address\" name=\"Address\" class=\"form-control\" id=\"Address\" placeholder=\"Enter Address\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Pin\">Pin</label>\r\n                <input type=\"text\" [(ngModel)]=\"Pin\" name=\"Pin\" class=\"form-control\" id=\"Pin\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Image\">Image</label>\r\n                <input type=\"text\" [(ngModel)]=\"Image\" name=\"Image\" class=\"form-control\" id=\"Image\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n            </form>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- <div class=\"w3-container w3-card w3-white w3-round w3-margin\"><br>\r\n\r\n        <span class=\"w3-right w3-opacity\"></span>\r\n\r\n\r\n      </div> -->\r\n\r\n\r\n\r\n\r\n\r\n    <!-- End Middle Column -->\r\n    </div>\r\n\r\n    <!-- Right Column -->\r\n    <div class=\"w3-col m2\">\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n          <p>Upcoming Events:</p>\r\n          <img src=\"assets/images/avatar3.png\" alt=\"Forest\" style=\"width:100%;\">\r\n          <p><strong></strong></p>\r\n          <p></p>\r\n          <p><button class=\"w3-button w3-block w3-theme-l4\"></button></p>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n\r\n          <div class=\"w3-row w3-opacity\">\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-green w3-section\" title=\"Accept\"><i class=\"fa fa-check\"></i></button>\r\n            </div>\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-red w3-section\" title=\"Decline\"><i class=\"fa fa-remove\"></i></button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n\r\n    <!-- End Right Column -->\r\n    </div>\r\n\r\n  <!-- End Grid -->\r\n  </div>\r\n\r\n<!-- End Page Container -->\r\n</div>\r\n<br>\r\n"
+module.exports = "<!-- Page Container -->\r\n<div class=\"w3-container w3-content\" style=\"max-width:1400px;margin-top:80px\">\r\n  <!-- The Grid -->\r\n  <div class=\"w3-row\">\r\n    <!-- Left Column -->\r\n    <div class=\"w3-col m3\">\r\n      <!-- Profile -->\r\n      <div class=\"w3-card w3-round w3-white\">\r\n        <div class=\"w3-container\">\r\n         <h4 class=\"w3-center\">Profile</h4>\r\n         <p class=\"w3-center\"><img src=\"assets/images/avatar3.png\" class=\"w3-circle\" style=\"height:106px;width:106px\" alt=\"Avatar\"></p>\r\n         <hr>\r\n         <div *ngIf=\"user\">\r\n         <p><i class=\"fa fa-pencil fa-fw w3-margin-right w3-text-theme\"></i> Name : {{user.name}}</p>\r\n         <p><i class=\"fa fa-envelope-square fa-fw w3-margin-right w3-text-theme\"></i>{{user.email}}</p>\r\n         <p><i class=\"fa fa-mobile fa-fw w3-margin-right w3-text-theme\"></i> {{user.mobile}} </p>\r\n        </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <!-- Accordion -->\r\n      <div class=\"w3-card w3-round\">\r\n        <div class=\"w3-white\">\r\n          <button (click)=\"myFunction('Details1')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-circle-o-notch fa-fw w3-margin-right\"></i> My Details</button>\r\n          <div id=\"Details1\" class=\"w3-hide w3-container\">\r\n            <p>\r\n              <button (click)=\"addProfileUser()\" class=\"\">\r\n              <i class=\"fa fa-user-plus\"></i>\r\n              </button>\r\n              <i class=\"fa fa-user\"></i>\r\n            </p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo2')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i> Appointment History</button>\r\n          <div id=\"Demo2\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo3')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-users fa-fw w3-margin-right\"></i> My Medical Record</button>\r\n          <div id=\"Demo3\" class=\"w3-hide w3-container\">\r\n              <div class=\"w3-row-padding\">\r\n               <br>\r\n                <div class=\"w3-half\">\r\n                  <!-- <img src=\"assets/images/abc.jpg\" style=\"width:100%\" class=\"w3-margin-bottom\"> -->\r\n                </div>\r\n              </div>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo4')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i>My Dependants and Carers</button>\r\n          <div id=\"Demo4\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo5')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-user-md fa-fw w3-margin-right\"></i>My Surgery</button>\r\n          <div id=\"Demo5\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n    <!-- End Left Column -->\r\n    </div>\r\n\r\n    <!-- Middle Column -->\r\n    <div class=\"w3-col m7\">\r\n\r\n      <div class=\"w3-row-padding\">\r\n        <div class=\"w3-col m12\">\r\n          <div class=\"w3-card w3-round w3-white\">\r\n            <div *ngIf=\"showSelected\" class=\"w3-container w3-padding\">\r\n              <h6 class=\"w3-opacity\">\r\n                  add Profile\r\n              </h6>\r\n              <form (submit)=\"onProfileSubmit()\" >\r\n              <div class=\"fields-container\">\r\n                <!-- <label for=\"name\">Name</label>\r\n                <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Enter Name\">\r\n                 -->\r\n                <mat-form-field>\r\n                  <input matInput placeholder=\"Name\"  id=\"name\" [(ngModel)]=\"name\"  name=\"name\" >\r\n                </mat-form-field>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"mobile\">mobile</label>\r\n                <input type=\"text\" [(ngModel)]=\"mobile\" name=\"mobile\" class=\"form-control\" id=\"mobile\" placeholder=\"Enter mobile\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <mat-form-field class=\"form-control\">\r\n                  <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker touchUi=\"true\" #picker></mat-datepicker>\r\n                </mat-form-field>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"email\">Email</label>\r\n                <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"gender\">gender</label>\r\n                <input type=\"text\" [(ngModel)]=\"gender\" name=\"gender\" class=\"form-control\" id=\"gender\" placeholder=\"Enter gender\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Address\">Address</label>\r\n                <input type=\"text\" [(ngModel)]=\"Address\" name=\"Address\" class=\"form-control\" id=\"Address\" placeholder=\"Enter Address\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Pin\">Pin</label>\r\n                <input type=\"text\" [(ngModel)]=\"Pin\" name=\"Pin\" class=\"form-control\" id=\"Pin\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Image\">Image</label>\r\n                <input type=\"text\" [(ngModel)]=\"Image\" name=\"Image\" class=\"form-control\" id=\"Image\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n            </form>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- <div class=\"w3-container w3-card w3-white w3-round w3-margin\"><br>\r\n\r\n        <span class=\"w3-right w3-opacity\"></span>\r\n\r\n\r\n      </div> -->\r\n\r\n\r\n\r\n\r\n\r\n    <!-- End Middle Column -->\r\n    </div>\r\n\r\n    <!-- Right Column -->\r\n    <div class=\"w3-col m2\">\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n          <p>Upcoming Events:</p>\r\n          <img src=\"assets/images/avatar3.png\" alt=\"Forest\" style=\"width:100%;\">\r\n          <p><strong></strong></p>\r\n          <p></p>\r\n          <p><button class=\"w3-button w3-block w3-theme-l4\"></button></p>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n\r\n          <div class=\"w3-row w3-opacity\">\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-green w3-section\" title=\"Accept\"><i class=\"fa fa-check\"></i></button>\r\n            </div>\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-red w3-section\" title=\"Decline\"><i class=\"fa fa-remove\"></i></button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n\r\n    <!-- End Right Column -->\r\n    </div>\r\n\r\n  <!-- End Grid -->\r\n  </div>\r\n\r\n<!-- End Page Container -->\r\n</div>\r\n<br>\r\n"
 
 /***/ }),
 
@@ -678,6 +674,59 @@ var AuthGuard = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
     ], AuthGuard);
     return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/module/material.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaterialModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var MaterialModule = /** @class */ (function () {
+    function MaterialModule() {
+    }
+    MaterialModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatFormFieldModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatFormFieldModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */]
+            ]
+        })
+    ], MaterialModule);
+    return MaterialModule;
 }());
 
 
