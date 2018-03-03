@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { ValidateService } from '../../services/validate.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import {FormControl, Validators} from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -24,6 +24,10 @@ export class ProfileComponent implements OnInit {
   user: Object;
   selectedValue: String = '';
   showSelected: boolean;
+  users;
+  reports;
+  showUserReports;
+  reportFound;
   constructor(
     private validateService: ValidateService,
     private authService: AuthService,
@@ -34,9 +38,9 @@ export class ProfileComponent implements OnInit {
   }
 
   genderArray = [
-    {view: 'Male', value: '0'},
-    {view: 'Female', value: '1'}
-   ];
+    { view: 'Male', value: '0' },
+    { view: 'Female', value: '1' }
+  ];
   onProfileSubmit() {
 
     const Profile = {
@@ -50,13 +54,13 @@ export class ProfileComponent implements OnInit {
       pin: this.Pin ? this.Pin : null,
       image: this.Image ? this.Image : null,
       dateofupdate: new Date(),
-      fkRegistrationid:  Number(12245545486) // this.user.userId ? this.user.userId :
+      fkRegistrationid: Number(12245545486) // this.user.userId ? this.user.userId :
     };
 
     // validate profile field
     if (!this.validateService.validateProfile(Profile)) {
       console.log(Profile);
-      this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
+      this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
       return false;
     }
     console.log(Profile);
@@ -64,19 +68,18 @@ export class ProfileComponent implements OnInit {
     this.authService.createnewProfile(Profile).subscribe(data => {
       if (data.success) {
         console.log('Profile registered:- ' + data.success);
-        this.flashMessage.show('You are now registered profile.', {cssClass: 'alert-success', timeout: 3000});
-         this.router.navigate(['/profile']);
+        this.flashMessage.show('You are now registered profile.', { cssClass: 'alert-success', timeout: 3000 });
+        this.router.navigate(['/profile']);
         //this.router.navigateByUrl('/dashboard');
       } else {
         console.log('Error meassage :- ' + data.success);
-        this.flashMessage.show('Something went wrong:- ', {cssClass: 'alert-danger', timeout: 3000});
-         this.router.navigate(['/profile']);
+        this.flashMessage.show('Something went wrong:- ', { cssClass: 'alert-danger', timeout: 3000 });
+        this.router.navigate(['/profile']);
         //this.router.navigateByUrl('/profile');
       }
     });
   }
   myFunction(id) {
-    console.log(id);
     const x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
@@ -96,10 +99,20 @@ export class ProfileComponent implements OnInit {
         console.log(err);
         return false;
       });
+    this.users = [{ id: 1, name: 'shail' }, { id: 2, name: 'shail2' }, { id: 3, name: 'shail3' }]
   }
   addProfileUser() {
     this.showSelected = true;
+    this.showUserReports = false
   }
-
+  showReports(data) {
+    this.showSelected = false;
+    this.showUserReports = true
+    this.authService.getReport(data.id).subscribe(data => {
+      if (data.success) {
+        this.reports = data.data
+      }
+    });
+  }
 
 }

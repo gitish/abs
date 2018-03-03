@@ -75,5 +75,12 @@ createnewProfile(profile) {
     this.user = null;
     localStorage.clear();
   }
+
+  getReport(id) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.api_url+'/patient/report/'+id, {headers: headers})
+      .map(res => res.json());
+  }
   //#endregion "****"
 }

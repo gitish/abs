@@ -8,7 +8,8 @@ var http = require('http'),
     cors = require('cors');
 
 mongoose.Promise = global.Promise;
-
+global._ = require('lodash');
+global.fs = require('fs');
 
 const config = require('./config/database');
 mongoose.connect(config.database,{ useMongoClient: true });
