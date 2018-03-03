@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ValidateService } from '../../services/validate.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -21,6 +22,7 @@ export class ProfileComponent implements OnInit {
   Pin: Number;
   Image: String;
   user: Object;
+  selectedValue: String = '';
   showSelected: boolean;
   constructor(
     private validateService: ValidateService,
@@ -30,6 +32,11 @@ export class ProfileComponent implements OnInit {
   ) {
     this.showSelected = false;
   }
+
+  genderArray = [
+    {view: 'Male', value: '0'},
+    {view: 'Female', value: '1'}
+   ];
   onProfileSubmit() {
 
     const Profile = {
@@ -37,13 +44,13 @@ export class ProfileComponent implements OnInit {
       patientname: this.name,
       email: this.email ? this.email : null,
       mobile: this.mobile,
-      dob: this.dob ? this.dob : null,
-      gender: this.gender ? this.gender : 'male',
+      dob: null, // this.dob ? this.dob : null,
+      gender: this.selectedValue ? this.selectedValue : 'male',
       address: this.Address ? this.Address : null,
       pin: this.Pin ? this.Pin : null,
       image: this.Image ? this.Image : null,
       dateofupdate: new Date(),
-      fkRegistrationid:  Number(122456) // this.user.userId ? this.user.userId :
+      fkRegistrationid:  Number(12245545486) // this.user.userId ? this.user.userId :
     };
 
     // validate profile field
@@ -56,13 +63,15 @@ export class ProfileComponent implements OnInit {
     // create New Patient
     this.authService.createnewProfile(Profile).subscribe(data => {
       if (data.success) {
-        console.log(data.success);
+        console.log('Profile registered:- ' + data.success);
         this.flashMessage.show('You are now registered profile.', {cssClass: 'alert-success', timeout: 3000});
-        this.router.navigate(['/profile']);
+         this.router.navigate(['/profile']);
+        //this.router.navigateByUrl('/dashboard');
       } else {
-        console.log(data.success);
-        this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-        this.router.navigate(['/profile']);
+        console.log('Error meassage :- ' + data.success);
+        this.flashMessage.show('Something went wrong:- ', {cssClass: 'alert-danger', timeout: 3000});
+         this.router.navigate(['/profile']);
+        //this.router.navigateByUrl('/profile');
       }
     });
   }

@@ -8,7 +8,7 @@ exports.createPatient = async function(req,res,next)
         patientid: req.body.patientid,
         patientname: req.body.patientname,
         email: req.body.email,
-        dob : req.body.dob,
+        dob : '2018-03-03T06:32:00.217Z', // req.body.dob,
         mobile: req.body.mobile,
         gender: req.body.gender,
         // nationality: req.body.nationality,

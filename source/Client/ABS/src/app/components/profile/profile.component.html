@@ -74,12 +74,12 @@
               </h6>
               <form (submit)="onProfileSubmit()" >
               <div class="fields-container">
-                <!-- <label for="name">Name</label>
+                <label for="name">Name</label>
                 <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Enter Name">
-                 -->
-                <mat-form-field>
+
+                <!-- <mat-form-field>
                   <input matInput placeholder="Name"  id="name" [(ngModel)]="name"  name="name" >
-                </mat-form-field>
+                </mat-form-field> -->
               </div>
               <div class="form-group">
                 <label for="mobile">mobile</label>
@@ -87,7 +87,7 @@
               </div>
               <div class="form-group">
                 <mat-form-field class="form-control">
-                  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                  <input matInput [matDatepicker]="picker" id="dob" [(ngModel)]="dob" name="dob" placeholder="Choose a date">
                   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                   <mat-datepicker touchUi="true" #picker></mat-datepicker>
                 </mat-form-field>
@@ -96,9 +96,21 @@
                 <label for="email">Email</label>
                 <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email">
               </div>
+              <!-- <mat-form-field>
+                <mat-select placeholder="I'm a select" [(ngModel)]="selectedValue">
+                  <mat-option *ngFor="let item of genderArray" [value]="item.value">
+                    {{item.view}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field> -->
               <div class="form-group">
                 <label for="gender">gender</label>
-                <input type="text" [(ngModel)]="gender" name="gender" class="form-control" id="gender" placeholder="Enter gender">
+                <!-- <input type="text" [(ngModel)]="gender" name="gender" class="form-control" id="gender" placeholder="Enter gender"> -->
+                <select class="form-control" [(ngModel)]="selectedValue" id="gender" name="gender">
+                  <option *ngFor="let o of genderArray">
+                    {{o.view}}
+                  </option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="Address">Address</label>
@@ -110,7 +122,7 @@
               </div>
               <div class="form-group">
                 <label for="Image">Image</label>
-                <input type="text" [(ngModel)]="Image" name="Image" class="form-control" id="Image" placeholder="Enter Pin">
+                <input type="text" [(ngModel)]="Image" name="Image" class="form-control" id="Image" placeholder="select image">
               </div>
               <input type="submit" class="btn btn-primary" value="Submit">
             </form>

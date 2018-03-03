@@ -41,7 +41,7 @@ var help = require("./modules/help/help.js"),
     dr = require('./api/models/dr.js');
     patient = require('./api/models/patient.model');
 
-app.set('port', (process.env.PORT || 3060));
+app.set('port', (process.env.PORT || 3061));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

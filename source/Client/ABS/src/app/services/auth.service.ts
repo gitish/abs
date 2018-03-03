@@ -6,7 +6,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 
 @Injectable()
 export class AuthService {
-  api_url = 'http://localhost:3060';
+  api_url = 'http://localhost:3061';
 
 
   authToken: any;
@@ -29,7 +29,7 @@ export class AuthService {
     let headers = new Headers();
     console.log(user);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3060/user/authenticate', user, {headers: headers})
+    return this.http.post('http://localhost:3061/user/authenticate', user, {headers: headers})
       .map(res => res.json());
   }
 //#endregion "*****"
@@ -39,7 +39,7 @@ getProfile() {
     this.loadToken();
     headersProfile.append('Authorization', this.authToken);
     headersProfile.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3060/user/profile', {headers: headersProfile})
+    return this.http.get('http://localhost:3061/user/profile', {headers: headersProfile})
       .map(res => res.json());
 }
 createnewProfile(profile) {

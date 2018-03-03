@@ -417,7 +417,7 @@ module.exports = "/* W3.CSS 4.09 January 2018 by Jan Egil and Borge Refsnes */\r
 /***/ "./src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Container -->\r\n<div class=\"w3-container w3-content\" style=\"max-width:1400px;margin-top:80px\">\r\n  <!-- The Grid -->\r\n  <div class=\"w3-row\">\r\n    <!-- Left Column -->\r\n    <div class=\"w3-col m3\">\r\n      <!-- Profile -->\r\n      <div class=\"w3-card w3-round w3-white\">\r\n        <div class=\"w3-container\">\r\n         <h4 class=\"w3-center\">Profile</h4>\r\n         <p class=\"w3-center\"><img src=\"assets/images/avatar3.png\" class=\"w3-circle\" style=\"height:106px;width:106px\" alt=\"Avatar\"></p>\r\n         <hr>\r\n         <div *ngIf=\"user\">\r\n         <p><i class=\"fa fa-pencil fa-fw w3-margin-right w3-text-theme\"></i> Name : {{user.name}}</p>\r\n         <p><i class=\"fa fa-envelope-square fa-fw w3-margin-right w3-text-theme\"></i>{{user.email}}</p>\r\n         <p><i class=\"fa fa-mobile fa-fw w3-margin-right w3-text-theme\"></i> {{user.mobile}} </p>\r\n        </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <!-- Accordion -->\r\n      <div class=\"w3-card w3-round\">\r\n        <div class=\"w3-white\">\r\n          <button (click)=\"myFunction('Details1')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-circle-o-notch fa-fw w3-margin-right\"></i> My Details</button>\r\n          <div id=\"Details1\" class=\"w3-hide w3-container\">\r\n            <p>\r\n              <button (click)=\"addProfileUser()\" class=\"\">\r\n              <i class=\"fa fa-user-plus\"></i>\r\n              </button>\r\n              <i class=\"fa fa-user\"></i>\r\n            </p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo2')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i> Appointment History</button>\r\n          <div id=\"Demo2\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo3')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-users fa-fw w3-margin-right\"></i> My Medical Record</button>\r\n          <div id=\"Demo3\" class=\"w3-hide w3-container\">\r\n              <div class=\"w3-row-padding\">\r\n               <br>\r\n                <div class=\"w3-half\">\r\n                  <!-- <img src=\"assets/images/abc.jpg\" style=\"width:100%\" class=\"w3-margin-bottom\"> -->\r\n                </div>\r\n              </div>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo4')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i>My Dependants and Carers</button>\r\n          <div id=\"Demo4\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo5')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-user-md fa-fw w3-margin-right\"></i>My Surgery</button>\r\n          <div id=\"Demo5\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n    <!-- End Left Column -->\r\n    </div>\r\n\r\n    <!-- Middle Column -->\r\n    <div class=\"w3-col m7\">\r\n\r\n      <div class=\"w3-row-padding\">\r\n        <div class=\"w3-col m12\">\r\n          <div class=\"w3-card w3-round w3-white\">\r\n            <div *ngIf=\"showSelected\" class=\"w3-container w3-padding\">\r\n              <h6 class=\"w3-opacity\">\r\n                  add Profile\r\n              </h6>\r\n              <form (submit)=\"onProfileSubmit()\" >\r\n              <div class=\"fields-container\">\r\n                <!-- <label for=\"name\">Name</label>\r\n                <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Enter Name\">\r\n                 -->\r\n                <mat-form-field>\r\n                  <input matInput placeholder=\"Name\"  id=\"name\" [(ngModel)]=\"name\"  name=\"name\" >\r\n                </mat-form-field>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"mobile\">mobile</label>\r\n                <input type=\"text\" [(ngModel)]=\"mobile\" name=\"mobile\" class=\"form-control\" id=\"mobile\" placeholder=\"Enter mobile\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <mat-form-field class=\"form-control\">\r\n                  <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker touchUi=\"true\" #picker></mat-datepicker>\r\n                </mat-form-field>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"email\">Email</label>\r\n                <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"gender\">gender</label>\r\n                <input type=\"text\" [(ngModel)]=\"gender\" name=\"gender\" class=\"form-control\" id=\"gender\" placeholder=\"Enter gender\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Address\">Address</label>\r\n                <input type=\"text\" [(ngModel)]=\"Address\" name=\"Address\" class=\"form-control\" id=\"Address\" placeholder=\"Enter Address\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Pin\">Pin</label>\r\n                <input type=\"text\" [(ngModel)]=\"Pin\" name=\"Pin\" class=\"form-control\" id=\"Pin\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Image\">Image</label>\r\n                <input type=\"text\" [(ngModel)]=\"Image\" name=\"Image\" class=\"form-control\" id=\"Image\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n            </form>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- <div class=\"w3-container w3-card w3-white w3-round w3-margin\"><br>\r\n\r\n        <span class=\"w3-right w3-opacity\"></span>\r\n\r\n\r\n      </div> -->\r\n\r\n\r\n\r\n\r\n\r\n    <!-- End Middle Column -->\r\n    </div>\r\n\r\n    <!-- Right Column -->\r\n    <div class=\"w3-col m2\">\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n          <p>Upcoming Events:</p>\r\n          <img src=\"assets/images/avatar3.png\" alt=\"Forest\" style=\"width:100%;\">\r\n          <p><strong></strong></p>\r\n          <p></p>\r\n          <p><button class=\"w3-button w3-block w3-theme-l4\"></button></p>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n\r\n          <div class=\"w3-row w3-opacity\">\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-green w3-section\" title=\"Accept\"><i class=\"fa fa-check\"></i></button>\r\n            </div>\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-red w3-section\" title=\"Decline\"><i class=\"fa fa-remove\"></i></button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n\r\n    <!-- End Right Column -->\r\n    </div>\r\n\r\n  <!-- End Grid -->\r\n  </div>\r\n\r\n<!-- End Page Container -->\r\n</div>\r\n<br>\r\n"
+module.exports = "<!-- Page Container -->\r\n<div class=\"w3-container w3-content\" style=\"max-width:1400px;margin-top:80px\">\r\n  <!-- The Grid -->\r\n  <div class=\"w3-row\">\r\n    <!-- Left Column -->\r\n    <div class=\"w3-col m3\">\r\n      <!-- Profile -->\r\n      <div class=\"w3-card w3-round w3-white\">\r\n        <div class=\"w3-container\">\r\n         <h4 class=\"w3-center\">Profile</h4>\r\n         <p class=\"w3-center\"><img src=\"assets/images/avatar3.png\" class=\"w3-circle\" style=\"height:106px;width:106px\" alt=\"Avatar\"></p>\r\n         <hr>\r\n         <div *ngIf=\"user\">\r\n         <p><i class=\"fa fa-pencil fa-fw w3-margin-right w3-text-theme\"></i> Name : {{user.name}}</p>\r\n         <p><i class=\"fa fa-envelope-square fa-fw w3-margin-right w3-text-theme\"></i>{{user.email}}</p>\r\n         <p><i class=\"fa fa-mobile fa-fw w3-margin-right w3-text-theme\"></i> {{user.mobile}} </p>\r\n        </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <!-- Accordion -->\r\n      <div class=\"w3-card w3-round\">\r\n        <div class=\"w3-white\">\r\n          <button (click)=\"myFunction('Details1')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-circle-o-notch fa-fw w3-margin-right\"></i> My Details</button>\r\n          <div id=\"Details1\" class=\"w3-hide w3-container\">\r\n            <p>\r\n              <button (click)=\"addProfileUser()\" class=\"\">\r\n              <i class=\"fa fa-user-plus\"></i>\r\n              </button>\r\n              <i class=\"fa fa-user\"></i>\r\n            </p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo2')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i> Appointment History</button>\r\n          <div id=\"Demo2\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo3')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-users fa-fw w3-margin-right\"></i> My Medical Record</button>\r\n          <div id=\"Demo3\" class=\"w3-hide w3-container\">\r\n              <div class=\"w3-row-padding\">\r\n               <br>\r\n                <div class=\"w3-half\">\r\n                  <!-- <img src=\"assets/images/abc.jpg\" style=\"width:100%\" class=\"w3-margin-bottom\"> -->\r\n                </div>\r\n              </div>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo4')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-calendar-check-o fa-fw w3-margin-right\"></i>My Dependants and Carers</button>\r\n          <div id=\"Demo4\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n          <button (click)=\"myFunction('Demo5')\" class=\"w3-button w3-block w3-theme-l1 w3-left-align\"><i class=\"fa fa-user-md fa-fw w3-margin-right\"></i>My Surgery</button>\r\n          <div id=\"Demo5\" class=\"w3-hide w3-container\">\r\n            <p>..</p>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n    <!-- End Left Column -->\r\n    </div>\r\n\r\n    <!-- Middle Column -->\r\n    <div class=\"w3-col m7\">\r\n\r\n      <div class=\"w3-row-padding\">\r\n        <div class=\"w3-col m12\">\r\n          <div class=\"w3-card w3-round w3-white\">\r\n            <div *ngIf=\"showSelected\" class=\"w3-container w3-padding\">\r\n              <h6 class=\"w3-opacity\">\r\n                  add Profile\r\n              </h6>\r\n              <form (submit)=\"onProfileSubmit()\" >\r\n              <div class=\"fields-container\">\r\n                <label for=\"name\">Name</label>\r\n                <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Enter Name\">\r\n\r\n                <!-- <mat-form-field>\r\n                  <input matInput placeholder=\"Name\"  id=\"name\" [(ngModel)]=\"name\"  name=\"name\" >\r\n                </mat-form-field> -->\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"mobile\">mobile</label>\r\n                <input type=\"text\" [(ngModel)]=\"mobile\" name=\"mobile\" class=\"form-control\" id=\"mobile\" placeholder=\"Enter mobile\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <mat-form-field class=\"form-control\">\r\n                  <input matInput [matDatepicker]=\"picker\" id=\"dob\" [(ngModel)]=\"dob\" name=\"dob\" placeholder=\"Choose a date\">\r\n                  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n                  <mat-datepicker touchUi=\"true\" #picker></mat-datepicker>\r\n                </mat-form-field>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"email\">Email</label>\r\n                <input type=\"email\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" id=\"email\" aria-describedby=\"emailHelp\" placeholder=\"Enter Email\">\r\n              </div>\r\n              <!-- <mat-form-field>\r\n                <mat-select placeholder=\"I'm a select\" [(ngModel)]=\"selectedValue\">\r\n                  <mat-option *ngFor=\"let item of genderArray\" [value]=\"item.value\">\r\n                    {{item.view}}\r\n                  </mat-option>\r\n                </mat-select>\r\n              </mat-form-field> -->\r\n              <div class=\"form-group\">\r\n                <label for=\"gender\">gender</label>\r\n                <!-- <input type=\"text\" [(ngModel)]=\"gender\" name=\"gender\" class=\"form-control\" id=\"gender\" placeholder=\"Enter gender\"> -->\r\n                <select class=\"form-control\" [(ngModel)]=\"selectedValue\" id=\"gender\" name=\"gender\">\r\n                  <option *ngFor=\"let o of genderArray\">\r\n                    {{o.view}}\r\n                  </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Address\">Address</label>\r\n                <input type=\"text\" [(ngModel)]=\"Address\" name=\"Address\" class=\"form-control\" id=\"Address\" placeholder=\"Enter Address\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Pin\">Pin</label>\r\n                <input type=\"text\" [(ngModel)]=\"Pin\" name=\"Pin\" class=\"form-control\" id=\"Pin\" placeholder=\"Enter Pin\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"Image\">Image</label>\r\n                <input type=\"text\" [(ngModel)]=\"Image\" name=\"Image\" class=\"form-control\" id=\"Image\" placeholder=\"select image\">\r\n              </div>\r\n              <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n            </form>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- <div class=\"w3-container w3-card w3-white w3-round w3-margin\"><br>\r\n\r\n        <span class=\"w3-right w3-opacity\"></span>\r\n\r\n\r\n      </div> -->\r\n\r\n\r\n\r\n\r\n\r\n    <!-- End Middle Column -->\r\n    </div>\r\n\r\n    <!-- Right Column -->\r\n    <div class=\"w3-col m2\">\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n          <p>Upcoming Events:</p>\r\n          <img src=\"assets/images/avatar3.png\" alt=\"Forest\" style=\"width:100%;\">\r\n          <p><strong></strong></p>\r\n          <p></p>\r\n          <p><button class=\"w3-button w3-block w3-theme-l4\"></button></p>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n      <div class=\"w3-card w3-round w3-white w3-center\">\r\n        <div class=\"w3-container\">\r\n\r\n          <div class=\"w3-row w3-opacity\">\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-green w3-section\" title=\"Accept\"><i class=\"fa fa-check\"></i></button>\r\n            </div>\r\n            <div class=\"w3-half\">\r\n              <button class=\"w3-button w3-block w3-red w3-section\" title=\"Decline\"><i class=\"fa fa-remove\"></i></button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n\r\n\r\n\r\n\r\n    <!-- End Right Column -->\r\n    </div>\r\n\r\n  <!-- End Grid -->\r\n  </div>\r\n\r\n<!-- End Page Container -->\r\n</div>\r\n<br>\r\n"
 
 /***/ }),
 
@@ -452,6 +452,11 @@ var ProfileComponent = /** @class */ (function () {
         this.authService = authService;
         this.router = router;
         this.flashMessage = flashMessage;
+        this.selectedValue = '';
+        this.genderArray = [
+            { view: 'Male', value: '0' },
+            { view: 'Female', value: '1' }
+        ];
         this.showSelected = false;
     }
     ProfileComponent.prototype.onProfileSubmit = function () {
@@ -461,13 +466,13 @@ var ProfileComponent = /** @class */ (function () {
             patientname: this.name,
             email: this.email ? this.email : null,
             mobile: this.mobile,
-            dob: this.dob ? this.dob : null,
-            gender: this.gender ? this.gender : 'male',
+            dob: null,
+            gender: this.selectedValue ? this.selectedValue : 'male',
             address: this.Address ? this.Address : null,
             pin: this.Pin ? this.Pin : null,
             image: this.Image ? this.Image : null,
             dateofupdate: new Date(),
-            fkRegistrationid: Number(122456) // this.user.userId ? this.user.userId :
+            fkRegistrationid: Number(12245545486) // this.user.userId ? this.user.userId :
         };
         // validate profile field
         if (!this.validateService.validateProfile(Profile)) {
@@ -479,14 +484,16 @@ var ProfileComponent = /** @class */ (function () {
         // create New Patient
         this.authService.createnewProfile(Profile).subscribe(function (data) {
             if (data.success) {
-                console.log(data.success);
+                console.log('Profile registered:- ' + data.success);
                 _this.flashMessage.show('You are now registered profile.', { cssClass: 'alert-success', timeout: 3000 });
                 _this.router.navigate(['/profile']);
+                //this.router.navigateByUrl('/dashboard');
             }
             else {
-                console.log(data.success);
-                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                console.log('Error meassage :- ' + data.success);
+                _this.flashMessage.show('Something went wrong:- ', { cssClass: 'alert-danger', timeout: 3000 });
                 _this.router.navigate(['/profile']);
+                //this.router.navigateByUrl('/profile');
             }
         });
     };
@@ -703,26 +710,28 @@ var MaterialModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatButtonModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatCardModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCheckboxModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatFormFieldModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatSelectModule */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatButtonModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatCardModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCheckboxModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatFormFieldModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatSelectModule */]
             ]
         })
     ], MaterialModule);
@@ -759,7 +768,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
-        this.api_url = 'http://localhost:3060';
+        this.api_url = 'http://localhost:3061';
         //this.isDev = true;  // Change to false before deployment
     }
     //#region "User "
@@ -775,7 +784,7 @@ var AuthService = /** @class */ (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         console.log(user);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3060/user/authenticate', user, { headers: headers })
+        return this.http.post('http://localhost:3061/user/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     //#endregion "*****"
@@ -785,7 +794,7 @@ var AuthService = /** @class */ (function () {
         this.loadToken();
         headersProfile.append('Authorization', this.authToken);
         headersProfile.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3060/user/profile', { headers: headersProfile })
+        return this.http.get('http://localhost:3061/user/profile', { headers: headersProfile })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.createnewProfile = function (profile) {
