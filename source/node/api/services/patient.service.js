@@ -22,6 +22,8 @@ exports.createPatient = async function (patient) {
 
     try
     {
+        console.log('Before save : ');
+        console.log(newPatient);
         var savePatient = await newPatient.save()
         return savePatient;
     }
