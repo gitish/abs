@@ -50,6 +50,9 @@ module.exports = function(app) {
         .put(PatientController.updatePatient)
         .delete(PatientController.deletePatient);
 
+    app.route('/patient/report/:id')
+        .get(PatientController.getPatientReport)
+
     
         
      

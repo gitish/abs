@@ -72,3 +72,12 @@ exports.deletePatient = async function (req,res,next) {
         return res.status(400).json({status:400,message:e.message});
     }
 }
+
+exports.getPatientReport = async function (req,res,next) {
+    var id = _.toString(req.params.id)
+    fs.readFile('report.json', function(err, data) {
+       var report = _.filter(JSON.parse(data.toString('utf8')).report,{FkPatientID :id})
+       res.send({success:true,data :report})
+    });
+   
+}
