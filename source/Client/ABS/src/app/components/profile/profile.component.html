@@ -37,11 +37,8 @@
               <i class="fa fa-user"></i>
             </p>
           </div>
-          <button (click)="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+          <button [routerLink]="['/appointment']" class="w3-button w3-block w3-theme-l1 w3-left-align">
             <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Appointment History</button>
-          <div id="Demo2" class="w3-hide w3-container">
-            <p>..</p>
-          </div>
           <button (click)="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align">
             <i class="fa fa-users fa-fw w3-margin-right"></i> My Medical Record</button>
           <div id="Demo3" class="w3-hide w3-container">
@@ -59,12 +56,12 @@
           </div>
           <button (click)="myFunction('Demo5')" class="w3-button w3-block w3-theme-l1 w3-left-align">
             <i class="fa fa-user-md fa-fw w3-margin-right"></i>Report</button>
-          <div id="Demo5" class="w3-hide w3-container">
+          <!-- <div id="Demo5" class="w3-hide w3-container">  
             <p>
               <button (click)="showReports(user)" class="w3-button w3-blue-grey" *ngFor="let user of users" style="margin-left:2px"> {{user.name}}
               </button>
             </p>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -142,52 +139,6 @@
             </div>
           </div>
 
-          <div *ngIf="showUserReports" class="w3-container w3-padding">
-            <h3 class="w3-opacity"> Report </h3>
-            <div class="w3-blue-grey w3-hover-shadow" style="margin-bottom: 5px" *ngFor="let report of reports">
-              <div class="w3-container">
-                <div class="row">
-                  <div class="col col-md-6">
-                    <b>Date:</b> {{report.DateOfVisit}}
-                  </div>
-                  <div class="col col-md-6">
-                    <b>Location:</b> {{report.Location}}
-                  </div>
-                </div>
-                <div class="row ">
-                  <div class="col col-md-12">
-                    <b>Symptoms:</b> {{report.Symptoms}}
-                  </div>
-                </div>
-                <div class="row ">
-                  <div class="col col-md-12">
-                    <b>Description:</b> {{report.Desc}}
-                  </div>
-                </div>
-                <div class="row ">
-                  <div class="col col-md-12">
-                    <b>Subscription:</b> {{report.Subscription}}
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col col-md-6">
-                    <b>Medicine:</b> {{report.Medicine}}
-                  </div>
-                  <div class="col col-md-6">
-                    <b>TimeStamp:</b> {{report.TimeStamp}}
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col col-md-6">
-                    <b>Medicine Total:</b> {{report.MedicinePriceTotal}}
-                  </div>
-                  <div class="col col-md-6">
-                    <b>Doctor Charge: </b> {{report.Charge}}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

@@ -8,11 +8,4 @@ source/java/target/
 .DS_Store
 pipelines/.DS_Store
 node_modules
-source/node/public/dist/assets/images/avatar3.png
-source/node/public/dist/favicon.ico
-source/node/public/dist/index.html
-source/node/public/dist/inline.bundle.js
-source/node/public/dist/inline.bundle.js.map
-source/node/public/dist/main.bundle.js
-source/node/public/dist/main.bundle.js.map
-source/node/public/dist/polyfills.bundle.js
+
