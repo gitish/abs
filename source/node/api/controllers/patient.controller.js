@@ -73,11 +73,16 @@ exports.deletePatient = async function (req,res,next) {
     }
 }
 
-exports.getPatientReport = async function (req,res,next) {
+exports.getPatientReport = async function (req, res, next) {
     var id = _.toString(req.params.id)
-    fs.readFile('report.json', function(err, data) {
-       var report = _.filter(JSON.parse(data.toString('utf8')).report,{FkPatientID :id})
-       res.send({success:true,data :report})
-    });
+    db.collection('reports').find({
+        'FkPatientID': req.params.id
+    }).toArray(function (err, result) {
+        if (err) {
+            throw err
+        } else {
+            res.send({ success: true, data: result })
+        }
+    })
    
 }

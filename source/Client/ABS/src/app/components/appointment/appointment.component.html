@@ -1,0 +1,36 @@
+<h3 class="w3-opacity"> Report </h3>
+<select class="form-control" [(ngModel)]="userName" (change)="showReports($event.target.value)" style="margin-bottom:20px">     
+  <option   *ngFor="let user of users; let i = index" value="{{user.name}}">{{user.name}}</option>
+  </select>
+
+<div class="card border-primary mb-12" *ngFor="let report of reports" style="margin-bottom:10px">
+  <div class="card-header">
+    <div class="row">
+      <div class="col col-md-3">
+        <b>Date:</b> {{report.DateOfVisit}}
+      </div>
+      <div class="col col-md-3">
+        <b>Location:</b> {{report.Location}}
+      </div>
+      <div class="col col-md-6">
+          <b>Symptoms:</b> {{report.Symptoms}}
+        </div>
+    </div>
+  </div>
+  <div class="card-body text-primary">
+    <p class="card-text">
+      <b>Description:</b> {{report.Desc}}
+    </p>
+    <p class="card-text">
+      <b>Subscription:</b> {{report.Subscription}},  <b>Medicine:</b> {{report.Medicine}}, <b>TimeStamp: </b> {{report.TimeStamp}}, <b>Medicine Total:</b> {{report.MedicinePriceTotal}}, <b>Doctor Charge: </b> {{report.Charge}}
+    </p>
+  </div>
+</div>
+
+<div class="card border-danger mb-12"  style="margin-bottom:10px" *ngIf="reports">
+  <div class="card-body text-danger"  *ngIf="reports.length<1">
+    <p class="card-text">
+    No Report Found.
+    </p>
+  </div>
+</div>

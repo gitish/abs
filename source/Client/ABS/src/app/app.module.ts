@@ -22,13 +22,15 @@ import { AuthGuard } from './guards/auth.guard';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { CommonModule } from '@angular/common';
+import { AppointmentComponent } from './components/appointment/appointment.component';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]}
+  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  {path:'appointment', component: AppointmentComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({
@@ -39,7 +41,8 @@ const appRoutes: Routes =  [
     LoginComponent,
     NavbarComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,
