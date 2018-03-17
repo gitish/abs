@@ -135,7 +135,8 @@
                 </div>
                 <div class="form-group">
                   <label for="Image">Image</label>
-                  <input type="text" [(ngModel)]="Image" name="Image" class="form-control" id="Image" placeholder="select image">
+                  <!-- <input type="text" [(ngModel)]="Image" name="Image" class="form-control" id="Image" placeholder="select image"> -->
+                  <input type="file" [(ngModel)]="Image" name="Image" class="form-control" id="Image" placeholder="select image" (change)="handleFileInput($event.target.files)"/>
                 </div>
                 <input type="submit" class="btn btn-primary" value="Submit">
               </form>

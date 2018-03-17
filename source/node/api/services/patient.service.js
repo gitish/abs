@@ -83,3 +83,4 @@ exports.deletePatient = async function (patientId) {
         throw Error('Error Occured while deleting the patient'+e.message);
     }
 }
+

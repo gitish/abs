@@ -1,20 +1,28 @@
 var PatientService = require('../services/patient.service');
-
+var multer = require('multer');
 _this = this;
 
 exports.createPatient = async function(req,res,next)
 {
+    upload(req,res,function(err){
+        console.log(req.file);
+        if(err){
+             res.json({error_code:1,err_desc:err});
+             return;
+        }
+         res.json({error_code:0,err_desc:null});
+    });
     var patient={
         patientid: req.body.patientid,
         patientname: req.body.patientname,
         email: req.body.email,
-        dob : '2018-03-03T06:32:00.217Z', // req.body.dob,
+        dob :  req.body.dob,
         mobile: req.body.mobile,
         gender: req.body.gender,
         // nationality: req.body.nationality,
         address : req.body.address,
         pin: req.body.pin,
-        image: req.body.image,
+        image: upload(req.body.image),
         FkRegistrationID: req.body.fkRegistrationid
               
     }
@@ -81,3 +89,15 @@ exports.getPatientReport = async function (req,res,next) {
     });
    
 }
+var upload = multer({ //multer settings
+    storage: storage
+}).single('file');
+var storage = multer.diskStorage({ //multers disk storage settings
+    destination: function (req, file, cb) {
+        cb(null, './uploads/');
+    },
+    filename: function (req, file, cb) {
+        var datetimestamp = Date.now();
+        cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
+    }
+});
