@@ -82,5 +82,12 @@ createnewProfile(profile) {
     return this.http.get(this.api_url+'/patient/report/'+id, {headers: headers})
       .map(res => res.json());
   }
+
+  getDoctor(searchData) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this.api_url+'/patient/doctor/'+searchData, {headers: headers})
+      .map(res => res.json());
+  }
   //#endregion "****"
 }

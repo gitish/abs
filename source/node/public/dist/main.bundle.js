@@ -32,24 +32,24 @@ module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <f
 /***/ }),
 
 /***/ "./src/app/app.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
     }
     AppComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")]
@@ -57,82 +57,102 @@ var AppComponent = /** @class */ (function () {
     ], AppComponent);
     return AppComponent;
 }());
-exports.AppComponent = AppComponent;
+
 
 
 /***/ }),
 
 /***/ "./src/app/app.module.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__module_material_module__ = __webpack_require__("./src/app/module/material.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__ = __webpack_require__("./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__ = __webpack_require__("./src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_navbar_navbar_component__ = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__ = __webpack_require__("./src/app/components/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_appointment_appointment_component__ = __webpack_require__("./src/app/components/appointment/appointment.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var http_1 = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var material_module_1 = __webpack_require__("./src/app/module/material.module.ts");
-var material_1 = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
-var app_component_1 = __webpack_require__("./src/app/app.component.ts");
-var home_component_1 = __webpack_require__("./src/app/components/home/home.component.ts");
-var dashboard_component_1 = __webpack_require__("./src/app/components/dashboard/dashboard.component.ts");
-var login_component_1 = __webpack_require__("./src/app/components/login/login.component.ts");
-var navbar_component_1 = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
-var profile_component_1 = __webpack_require__("./src/app/components/profile/profile.component.ts");
-var register_component_1 = __webpack_require__("./src/app/components/register/register.component.ts");
-var validate_service_1 = __webpack_require__("./src/app/services/validate.service.ts");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
-var auth_guard_1 = __webpack_require__("./src/app/guards/auth.guard.ts");
-var animations_1 = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-var appointment_component_1 = __webpack_require__("./src/app/components/appointment/appointment.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var appRoutes = [
-    { path: '', component: home_component_1.HomeComponent },
-    { path: 'register', component: register_component_1.RegisterComponent },
-    { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'profile', component: profile_component_1.ProfileComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'appointment', component: appointment_component_1.AppointmentComponent, canActivate: [auth_guard_1.AuthGuard] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__["a" /* HomeComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_13__components_register_register_component__["a" /* RegisterComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'appointment', component: __WEBPACK_IMPORTED_MODULE_19__components_appointment_appointment_component__["a" /* AppointmentComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        core_1.NgModule({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                app_component_1.AppComponent,
-                home_component_1.HomeComponent,
-                dashboard_component_1.DashboardComponent,
-                login_component_1.LoginComponent,
-                navbar_component_1.NavbarComponent,
-                profile_component_1.ProfileComponent,
-                register_component_1.RegisterComponent,
-                appointment_component_1.AppointmentComponent
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_navbar_navbar_component__["a" /* NavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_appointment_appointment_component__["a" /* AppointmentComponent */]
             ],
             imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                http_1.HttpModule,
-                material_module_1.MaterialModule,
-                animations_1.BrowserAnimationsModule,
-                router_1.RouterModule.forRoot(appRoutes),
-                angular2_flash_messages_1.FlashMessagesModule.forRoot()
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
+                __WEBPACK_IMPORTED_MODULE_5__module_material_module__["a" /* MaterialModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
+                __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__["FlashMessagesModule"].forRoot()
             ],
-            providers: [validate_service_1.ValidateService, auth_service_1.AuthService, auth_guard_1.AuthGuard, material_1.MatDatepickerIntl],
-            bootstrap: [app_component_1.AppComponent]
+            providers: [__WEBPACK_IMPORTED_MODULE_14__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_6__angular_material__["d" /* MatDatepickerIntl */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
 }());
-exports.AppModule = AppModule;
+
 
 
 /***/ }),
@@ -147,15 +167,19 @@ module.exports = ""
 /***/ "./src/app/components/appointment/appointment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3 class=\"w3-opacity\"> Report </h3>\n<select class=\"form-control\" [(ngModel)]=\"userName\" (change)=\"showReports($event.target.value)\" style=\"margin-bottom:20px\">     \n  <option   *ngFor=\"let user of users; let i = index\" value=\"{{user.name}}\">{{user.name}}</option>\n  </select>\n\n<div class=\"card border-primary mb-12\" *ngFor=\"let report of reports\" style=\"margin-bottom:10px\">\n  <div class=\"card-header\">\n    <div class=\"row\">\n      <div class=\"col col-md-3\">\n        <b>Date:</b> {{report.DateOfVisit}}\n      </div>\n      <div class=\"col col-md-3\">\n        <b>Location:</b> {{report.Location}}\n      </div>\n      <div class=\"col col-md-6\">\n          <b>Symptoms:</b> {{report.Symptoms}}\n        </div>\n    </div>\n  </div>\n  <div class=\"card-body text-primary\">\n    <p class=\"card-text\">\n      <b>Description:</b> {{report.Desc}}\n    </p>\n    <p class=\"card-text\">\n      <b>Subscription:</b> {{report.Subscription}},  <b>Medicine:</b> {{report.Medicine}}, <b>TimeStamp: </b> {{report.TimeStamp}}, <b>Medicine Total:</b> {{report.MedicinePriceTotal}}, <b>Doctor Charge: </b> {{report.Charge}}\n    </p>\n  </div>\n</div>\n\n<div class=\"card border-danger mb-12\"  style=\"margin-bottom:10px\" *ngIf=\"reports\">\n  <div class=\"card-body text-danger\"  *ngIf=\"reports.length<1\">\n    <p class=\"card-text\">\n    No Report Found.\n    </p>\n  </div>\n</div>"
+module.exports = "<h3 class=\"w3-opacity\"> Report </h3>\r\n<select class=\"form-control\" [(ngModel)]=\"userName\" (change)=\"showReports($event.target.value)\" style=\"margin-bottom:20px\">     \r\n  <option   *ngFor=\"let user of users; let i = index\" value=\"{{user.name}}\">{{user.name}}</option>\r\n  </select>\r\n\r\n<div class=\"card border-primary mb-12\" *ngFor=\"let report of reports\" style=\"margin-bottom:10px\">\r\n  <div class=\"card-header\">\r\n    <div class=\"row\">\r\n      <div class=\"col col-md-3\">\r\n        <b>Date:</b> {{report.DateOfVisit}}\r\n      </div>\r\n      <div class=\"col col-md-3\">\r\n        <b>Location:</b> {{report.Location}}\r\n      </div>\r\n      <div class=\"col col-md-6\">\r\n          <b>Symptoms:</b> {{report.Symptoms}}\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body text-primary\">\r\n    <p class=\"card-text\">\r\n      <b>Description:</b> {{report.Desc}}\r\n    </p>\r\n    <p class=\"card-text\">\r\n      <b>Subscription:</b> {{report.Subscription}},  <b>Medicine:</b> {{report.Medicine}}, <b>TimeStamp: </b> {{report.TimeStamp}}, <b>Medicine Total:</b> {{report.MedicinePriceTotal}}, <b>Doctor Charge: </b> {{report.Charge}}\r\n    </p>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card border-danger mb-12\"  style=\"margin-bottom:10px\" *ngIf=\"reports && reports.length<1\">\r\n  <div class=\"card-body text-danger\" >\r\n    <p class=\"card-text\">\r\n    No Report Found.\r\n    </p>\r\n  </div>\r\n</div>\r\n<h4>temp view</h4>\r\n<h5></h5>\r\n<div class=\"form-group\">\r\n  <label for=\"Password\">Search Doctor</label>\r\n  <input type=\"text\" class=\"form-control\" (change)=\"doctorSearch(searchDoctor)\" placeholder=\" Search Doctor\" [(ngModel)]=\"searchDoctor\" >\r\n</div>\r\n\r\n<h4 *ngIf=\"selectedDoctorId\"> Doctor ID is : {{selectedDoctorId}}</h4>\r\n\r\n<div class=\"card border-primary mb-12\" *ngFor=\"let doctor of doctors\" style=\"margin-bottom:10px\">\r\n  <div class=\"card-header\" (click)=\"doctorDetails(doctor)\">\r\n    <div class=\"row\">\r\n      <div class=\"col col-md-3\">\r\n        <b>Name:</b> {{doctor.name}}\r\n      </div>\r\n      <div class=\"col col-md-3\">\r\n        <b>Specility:</b> {{doctor.Specility}}\r\n      </div>\r\n      <div class=\"col col-md-2\">\r\n          <b>Place:</b> {{doctor.Place}}\r\n        </div>\r\n        <div class=\"col col-md-2\">\r\n          <b>Fee:</b> {{doctor.Fee}}\r\n        </div>\r\n        <div class=\"col col-md-2\">\r\n          <b>status:</b> {{doctor.Status}}\r\n        </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/appointment/appointment.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -165,11 +189,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var validate_service_1 = __webpack_require__("./src/app/services/validate.service.ts");
+
+
+
+
 var AppointmentComponent = /** @class */ (function () {
     function AppointmentComponent(validateService, authService, router) {
         this.validateService = validateService;
@@ -199,19 +222,31 @@ var AppointmentComponent = /** @class */ (function () {
         }
         this.index(id);
     };
+    AppointmentComponent.prototype.doctorSearch = function (value) {
+        var _this = this;
+        this.selectedDoctorId = '';
+        this.authService.getDoctor(value).subscribe(function (data) {
+            if (data.success) {
+                _this.doctors = data.data;
+            }
+        });
+    };
+    AppointmentComponent.prototype.doctorDetails = function (doctor) {
+        this.selectedDoctorId = doctor.DrID;
+    };
     AppointmentComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-appointment',
             template: __webpack_require__("./src/app/components/appointment/appointment.component.html"),
             styles: [__webpack_require__("./src/app/components/appointment/appointment.component.css")]
         }),
-        __metadata("design:paramtypes", [validate_service_1.ValidateService,
-            auth_service_1.AuthService,
-            router_1.Router])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */],
+            __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], AppointmentComponent);
     return AppointmentComponent;
 }());
-exports.AppointmentComponent = AppointmentComponent;
+
 
 
 /***/ }),
@@ -231,10 +266,11 @@ module.exports = "<h2 class=\"page-header\">Dashboard</h2>\r\n<p>Welcome to your
 /***/ }),
 
 /***/ "./src/app/components/dashboard/dashboard.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,15 +280,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent() {
     }
     DashboardComponent.prototype.ngOnInit = function () {
     };
     DashboardComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dashboard',
             template: __webpack_require__("./src/app/components/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("./src/app/components/dashboard/dashboard.component.css")]
@@ -261,7 +296,7 @@ var DashboardComponent = /** @class */ (function () {
     ], DashboardComponent);
     return DashboardComponent;
 }());
-exports.DashboardComponent = DashboardComponent;
+
 
 
 /***/ }),
@@ -281,10 +316,11 @@ module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Appointment Boo
 /***/ }),
 
 /***/ "./src/app/components/home/home.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -294,15 +330,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
             template: __webpack_require__("./src/app/components/home/home.component.html"),
             styles: [__webpack_require__("./src/app/components/home/home.component.css")]
@@ -311,7 +346,7 @@ var HomeComponent = /** @class */ (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-exports.HomeComponent = HomeComponent;
+
 
 
 /***/ }),
@@ -331,10 +366,15 @@ module.exports = "<h2 class=\"page-header\" >Login</h2>\r\n<form class=\"form-si
 /***/ }),
 
 /***/ "./src/app/components/login/login.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -344,11 +384,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+
+
+
+
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(authService, router, flashMessage) {
         this.authService = authService;
@@ -380,18 +419,18 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-login',
             template: __webpack_require__("./src/app/components/login/login.component.html"),
             styles: [__webpack_require__("./src/app/components/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService,
-            router_1.Router,
-            angular2_flash_messages_1.FlashMessagesService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
-exports.LoginComponent = LoginComponent;
+
 
 
 /***/ }),
@@ -411,10 +450,15 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed
 /***/ }),
 
 /***/ "./src/app/components/navbar/navbar.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -424,11 +468,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+
+
+
+
 var NavbarComponent = /** @class */ (function () {
     function NavbarComponent(authService, router, flashMessage) {
         this.authService = authService;
@@ -446,18 +489,18 @@ var NavbarComponent = /** @class */ (function () {
         return false;
     };
     NavbarComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navbar',
             template: __webpack_require__("./src/app/components/navbar/navbar.component.html"),
             styles: [__webpack_require__("./src/app/components/navbar/navbar.component.css")]
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService,
-            router_1.Router,
-            angular2_flash_messages_1.FlashMessagesService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]])
     ], NavbarComponent);
     return NavbarComponent;
 }());
-exports.NavbarComponent = NavbarComponent;
+
 
 
 /***/ }),
@@ -477,10 +520,16 @@ module.exports = "<!-- Page Container -->\r\n<div class=\"w3-container w3-conten
 /***/ }),
 
 /***/ "./src/app/components/profile/profile.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -490,12 +539,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var validate_service_1 = __webpack_require__("./src/app/services/validate.service.ts");
-var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+
+
+
+
+
 var ProfileComponent = /** @class */ (function () {
     function ProfileComponent(validateService, authService, router, flashMessage) {
         this.validateService = validateService;
@@ -573,19 +621,19 @@ var ProfileComponent = /** @class */ (function () {
         this.showSelected = true;
     };
     ProfileComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-profile',
             template: __webpack_require__("./src/app/components/profile/profile.component.html"),
             styles: [__webpack_require__("./src/app/components/profile/profile.component.css")]
         }),
-        __metadata("design:paramtypes", [validate_service_1.ValidateService,
-            auth_service_1.AuthService,
-            router_1.Router,
-            angular2_flash_messages_1.FlashMessagesService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_validate_service__["a" /* ValidateService */],
+            __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"]])
     ], ProfileComponent);
     return ProfileComponent;
 }());
-exports.ProfileComponent = ProfileComponent;
+
 
 
 /***/ }),
@@ -605,10 +653,16 @@ module.exports = "<div>\r\n  <h2 class=\"page-header\">Register</h2>\r\n  <form 
 /***/ }),
 
 /***/ "./src/app/components/register/register.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -618,12 +672,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var validate_service_1 = __webpack_require__("./src/app/services/validate.service.ts");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+
+
+
+
+
 var RegisterComponent = /** @class */ (function () {
     function RegisterComponent(validateService, authService, router, flashMessage) {
         this.validateService = validateService;
@@ -669,28 +722,31 @@ var RegisterComponent = /** @class */ (function () {
         });
     };
     RegisterComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-register',
             template: __webpack_require__("./src/app/components/register/register.component.html"),
             styles: [__webpack_require__("./src/app/components/register/register.component.css")]
         }),
-        __metadata("design:paramtypes", [validate_service_1.ValidateService,
-            auth_service_1.AuthService,
-            router_1.Router,
-            angular2_flash_messages_1.FlashMessagesService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */],
+            __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]])
     ], RegisterComponent);
     return RegisterComponent;
 }());
-exports.RegisterComponent = RegisterComponent;
+
 
 
 /***/ }),
 
 /***/ "./src/app/guards/auth.guard.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -700,10 +756,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+
+
+
 var AuthGuard = /** @class */ (function () {
     function AuthGuard(authService, router) {
         this.authService = authService;
@@ -719,75 +774,81 @@ var AuthGuard = /** @class */ (function () {
         }
     };
     AuthGuard = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [auth_service_1.AuthService, router_1.Router])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
     ], AuthGuard);
     return AuthGuard;
 }());
-exports.AuthGuard = AuthGuard;
+
 
 
 /***/ }),
 
 /***/ "./src/app/module/material.module.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaterialModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var material_1 = __webpack_require__("./node_modules/@angular/material/esm5/material.es5.js");
+
+
 var MaterialModule = /** @class */ (function () {
     function MaterialModule() {
     }
     MaterialModule = __decorate([
-        core_1.NgModule({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
-                material_1.MatButtonModule,
-                material_1.MatMenuModule,
-                material_1.MatToolbarModule,
-                material_1.MatIconModule,
-                material_1.MatCardModule,
-                material_1.MatInputModule,
-                material_1.MatCheckboxModule,
-                material_1.MatFormFieldModule,
-                material_1.MatNativeDateModule,
-                material_1.MatDatepickerModule,
-                material_1.MatSelectModule
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatFormFieldModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatSelectModule */]
             ],
             exports: [
-                material_1.MatButtonModule,
-                material_1.MatMenuModule,
-                material_1.MatToolbarModule,
-                material_1.MatIconModule,
-                material_1.MatCardModule,
-                material_1.MatInputModule,
-                material_1.MatCheckboxModule,
-                material_1.MatFormFieldModule,
-                material_1.MatNativeDateModule,
-                material_1.MatDatepickerModule,
-                material_1.MatSelectModule
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatFormFieldModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["j" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatSelectModule */]
             ]
         })
     ], MaterialModule);
     return MaterialModule;
 }());
-exports.MaterialModule = MaterialModule;
+
 
 
 /***/ }),
 
 /***/ "./src/app/services/auth.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("./node_modules/angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -797,11 +858,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var http_1 = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-__webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-var angular2_jwt_1 = __webpack_require__("./node_modules/angular2-jwt/angular2-jwt.js");
+
+
+
+
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
@@ -811,14 +871,14 @@ var AuthService = /** @class */ (function () {
     //#region "User "
     AuthService.prototype.registerUser = function (user) {
         console.log(user);
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         var userregisterUrl = this.api_url + "/user/register";
         return this.http.post(userregisterUrl, user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         console.log(user);
         headers.append('Content-Type', 'application/json');
         return this.http.post('http://localhost:3061/user/authenticate', user, { headers: headers })
@@ -827,7 +887,7 @@ var AuthService = /** @class */ (function () {
     //#endregion "*****"
     //#region "Profile"
     AuthService.prototype.getProfile = function () {
-        var headersProfile = new http_1.Headers();
+        var headersProfile = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headersProfile.append('Authorization', this.authToken);
         headersProfile.append('Content-Type', 'application/json');
@@ -835,7 +895,7 @@ var AuthService = /** @class */ (function () {
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.createnewProfile = function (profile) {
-        var headersNewProfile = new http_1.Headers();
+        var headersNewProfile = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         console.log(profile);
         headersNewProfile.append('Content-Type', 'application/json');
         var profileUrl = this.api_url + "/patient";
@@ -856,7 +916,7 @@ var AuthService = /** @class */ (function () {
         this.authToken = token;
     };
     AuthService.prototype.loggedIn = function () {
-        return angular2_jwt_1.tokenNotExpired('id_token');
+        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;
@@ -864,27 +924,34 @@ var AuthService = /** @class */ (function () {
         localStorage.clear();
     };
     AuthService.prototype.getReport = function (id) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.get(this.api_url + '/patient/report/' + id, { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    AuthService.prototype.getDoctor = function (searchData) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(this.api_url + '/patient/doctor/' + searchData, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     AuthService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.Http])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]])
     ], AuthService);
     return AuthService;
 }());
-exports.AuthService = AuthService;
+
 
 
 /***/ }),
 
 /***/ "./src/app/services/validate.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -894,8 +961,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var ValidateService = /** @class */ (function () {
     function ValidateService() {
     }
@@ -920,27 +986,26 @@ var ValidateService = /** @class */ (function () {
         }
     };
     ValidateService = __decorate([
-        core_1.Injectable(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [])
     ], ValidateService);
     return ValidateService;
 }());
-exports.ValidateService = ValidateService;
+
 
 
 /***/ }),
 
 /***/ "./src/environments/environment.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.environment = {
+var environment = {
     production: false
 };
 
@@ -948,19 +1013,22 @@ exports.environment = {
 /***/ }),
 
 /***/ "./src/main.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var platform_browser_dynamic_1 = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-var app_module_1 = __webpack_require__("./src/app/app.module.ts");
-var environment_1 = __webpack_require__("./src/environments/environment.ts");
-if (environment_1.environment.production) {
-    core_1.enableProdMode();
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule)
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 
 
