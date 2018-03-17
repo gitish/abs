@@ -26,7 +26,6 @@ export class ProfileComponent implements OnInit {
   showSelected: boolean;
   users;
   reports;
-  showUserReports;
   reportFound;
   files: Object;
   fileToUpload: File = null;
@@ -121,20 +120,8 @@ export class ProfileComponent implements OnInit {
         console.log(err);
         return false;
       });
-    this.users = [{ id: 1, name: 'shail' }, { id: 2, name: 'shail2' }, { id: 3, name: 'shail3' }]
   }
   addProfileUser() {
     this.showSelected = true;
-    this.showUserReports = false
   }
-  showReports(data) {
-    this.showSelected = false;
-    this.showUserReports = true
-    this.authService.getReport(data.id).subscribe(data => {
-      if (data.success) {
-        this.reports = data.data
-      }
-    });
-  }
-
 }

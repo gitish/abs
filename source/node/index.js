@@ -14,7 +14,7 @@ global.fs = require('fs');
 const config = require('./config/database');
 mongoose.connect(config.database,{ useMongoClient: true });
 //mongoose.createConnection(config.database);
-let db = mongoose.connection;
+global.db = mongoose.connection;
 
 //check db error
 db.on('error', function(err) {
