@@ -147,7 +147,7 @@ module.exports = ""
 /***/ "./src/app/components/appointment/appointment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3 class=\"w3-opacity\"> Report </h3>\n<select class=\"form-control\" [(ngModel)]=\"userName\" (change)=\"showReports($event.target.value)\" style=\"margin-bottom:20px\">     \n  <option   *ngFor=\"let user of users; let i = index\" value=\"{{user.name}}\">{{user.name}}</option>\n  </select>\n\n<div class=\"card border-primary mb-12\" *ngFor=\"let report of reports\" style=\"margin-bottom:10px\">\n  <div class=\"card-header\">\n    <div class=\"row\">\n      <div class=\"col col-md-3\">\n        <b>Date:</b> {{report.DateOfVisit}}\n      </div>\n      <div class=\"col col-md-3\">\n        <b>Location:</b> {{report.Location}}\n      </div>\n      <div class=\"col col-md-6\">\n          <b>Symptoms:</b> {{report.Symptoms}}\n        </div>\n    </div>\n  </div>\n  <div class=\"card-body text-primary\">\n    <p class=\"card-text\">\n      <b>Description:</b> {{report.Desc}}\n    </p>\n    <p class=\"card-text\">\n      <b>Subscription:</b> {{report.Subscription}},  <b>Medicine:</b> {{report.Medicine}}, <b>TimeStamp: </b> {{report.TimeStamp}}, <b>Medicine Total:</b> {{report.MedicinePriceTotal}}, <b>Doctor Charge: </b> {{report.Charge}}\n    </p>\n  </div>\n</div>\n\n<div class=\"card border-danger mb-12\"  style=\"margin-bottom:10px\" *ngIf=\"reports && reports.length<1\">\n  <div class=\"card-body text-danger\" >\n    <p class=\"card-text\">\n    No Report Found.\n    </p>\n  </div>\n</div>\n<h4>temp view</h4>\n<h5></h5>\n<div class=\"form-group\">\n  <label for=\"Password\">Search Doctor</label>\n  <input type=\"text\" class=\"form-control\" (change)=\"doctorSearch(searchDoctor)\" placeholder=\" Search Doctor\" [(ngModel)]=\"searchDoctor\" >\n</div>\n\n<h4 *ngIf=\"selectedDoctorId\"> Doctor ID is : {{selectedDoctorId}}</h4>\n\n<div class=\"card border-primary mb-12\" *ngFor=\"let doctor of doctors\" style=\"margin-bottom:10px\">\n  <div class=\"card-header\" (click)=\"doctorDetails(doctor)\">\n    <div class=\"row\">\n      <div class=\"col col-md-3\">\n        <b>Name:</b> {{doctor.name}}\n      </div>\n      <div class=\"col col-md-3\">\n        <b>Specility:</b> {{doctor.Specility}}\n      </div>\n      <div class=\"col col-md-2\">\n          <b>Place:</b> {{doctor.Place}}\n        </div>\n        <div class=\"col col-md-2\">\n          <b>Fee:</b> {{doctor.Fee}}\n        </div>\n        <div class=\"col col-md-2\">\n          <b>status:</b> {{doctor.Status}}\n        </div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<h3 class=\"w3-opacity\"> Report </h3>\n<select class=\"form-control\" [(ngModel)]=\"userName\" (change)=\"showReports($event.target.value)\" style=\"margin-bottom:20px\">     \n  <option   *ngFor=\"let user of users; let i = index\" value=\"{{user.name}}\">{{user.name}}</option>\n  </select>\n\n<div class=\"card border-primary mb-12\" *ngFor=\"let report of reports\" style=\"margin-bottom:10px\">\n  <div class=\"card-header\">\n    <div class=\"row\">\n      <div class=\"col col-md-3\">\n        <b>Date:</b> {{report.DateOfVisit}}\n      </div>\n      <div class=\"col col-md-3\">\n        <b>Location:</b> {{report.Location}}\n      </div>\n      <div class=\"col col-md-6\">\n          <b>Symptoms:</b> {{report.Symptoms}}\n        </div>\n    </div>\n  </div>\n  <div class=\"card-body text-primary\">\n    <p class=\"card-text\">\n      <b>Description:</b> {{report.Desc}}\n    </p>\n    <p class=\"card-text\">\n      <b>Subscription:</b> {{report.Subscription}},  <b>Medicine:</b> {{report.Medicine}}, <b>TimeStamp: </b> {{report.TimeStamp}}, <b>Medicine Total:</b> {{report.MedicinePriceTotal}}, <b>Doctor Charge: </b> {{report.Charge}}\n    </p>\n  </div>\n</div>\n\n<div class=\"card border-danger mb-12\"  style=\"margin-bottom:10px\" *ngIf=\"reports\">\n  <div class=\"card-body text-danger\"  *ngIf=\"reports.length<1\">\n    <p class=\"card-text\">\n    No Report Found.\n    </p>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -198,18 +198,6 @@ var AppointmentComponent = /** @class */ (function () {
             }
         }
         this.index(id);
-    };
-    AppointmentComponent.prototype.doctorSearch = function (value) {
-        var _this = this;
-        this.selectedDoctorId = '';
-        this.authService.getDoctor(value).subscribe(function (data) {
-            if (data.success) {
-                _this.doctors = data.data;
-            }
-        });
-    };
-    AppointmentComponent.prototype.doctorDetails = function (doctor) {
-        this.selectedDoctorId = doctor.DrID;
     };
     AppointmentComponent = __decorate([
         core_1.Component({
@@ -879,12 +867,6 @@ var AuthService = /** @class */ (function () {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.get(this.api_url + '/patient/report/' + id, { headers: headers })
-            .map(function (res) { return res.json(); });
-    };
-    AuthService.prototype.getDoctor = function (searchData) {
-        var headers = new http_1.Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.get(this.api_url + '/patient/doctor/' + searchData, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService = __decorate([
