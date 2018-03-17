@@ -17,9 +17,7 @@ export class AppointmentComponent implements OnInit {
   users;
   reports;
   userName;
-  showRepors;
-  doctors;
-  selectedDoctorId;
+  showRepors
   constructor( private validateService: ValidateService,
     private authService: AuthService,
     private router: Router) { }
@@ -48,17 +46,6 @@ export class AppointmentComponent implements OnInit {
     }
     this.index(id);
   }
-  
-  doctorSearch(value){
-    this.selectedDoctorId='';
-    this.authService.getDoctor(value).subscribe(data => {
-      if (data.success) {
-        this.doctors = data.data
-      }
-    });
-  }
-  doctorDetails(doctor){
-    this.selectedDoctorId = doctor.DrID;
-  }
+    
 
 }
