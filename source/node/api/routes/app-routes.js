@@ -53,10 +53,8 @@ module.exports = function(app) {
     app.route('/patient/report/:id')
         .get(PatientController.getPatientReport)
 
-    
-        
-     
+    app.route('/patient/doctor/:value')
+        .get(PatientController.getDoctorList)
+
 };
 
-
-  
