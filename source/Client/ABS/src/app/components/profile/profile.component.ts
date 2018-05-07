@@ -6,7 +6,7 @@ import { ValidateService } from '../../services/validate.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { FormControl, Validators } from '@angular/forms';
-
+import { FileUploader } from 'ng2-file-upload';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -39,6 +39,7 @@ export class ProfileComponent implements OnInit {
     this.showSelected = false;
   }
 
+  public uploader: FileUploader = new FileUploader({url: 'http://localhost:3061/upload'});
   genderArray = [
     { view: 'male', value: '0' },
     { view: 'female', value: '1' }

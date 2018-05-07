@@ -23,7 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { CommonModule } from '@angular/common';
 import { AppointmentComponent } from './components/appointment/appointment.component';
-
+import { FileSelectDirective } from 'ng2-file-upload';
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
@@ -42,7 +42,8 @@ const appRoutes: Routes =  [
     NavbarComponent,
     ProfileComponent,
     RegisterComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,

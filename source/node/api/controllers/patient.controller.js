@@ -33,7 +33,7 @@ exports.createPatient = async function(req,res,next)
         var createdPatient = await PatientService.createPatient(patient);
         return res.status(201).json({status: 201, data: createdPatient, message: "Succesfully Created Patient"});
     } catch (error) {
-        return res.status(400).json({status: 400, message: "Patient Creation was Unsuccesfull"})
+        return res.status(400).json({status: 400, message: "Patient Creation was Unsuccesfull"});
     }
 }
 
