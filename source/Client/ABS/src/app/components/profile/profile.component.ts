@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
     this.showSelected = false;
   }
 
-  public uploader: FileUploader = new FileUploader({url: 'http://localhost:3061/upload'});
+  public uploader: FileUploader = new FileUploader({url: 'http://localhost:3061/uploadimage'});
   genderArray = [
     { view: 'male', value: '0' },
     { view: 'female', value: '1' }

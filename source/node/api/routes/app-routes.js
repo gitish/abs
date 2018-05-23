@@ -7,6 +7,7 @@ module.exports = function(app) {
     var userController = require('../controllers/user-controller.js');
     var drController = require('../controllers/dr-controller.js');
     var PatientController = require('../controllers/patient.controller');
+    var utilController = require('../controllers/util.controller');
     const passport = require('passport');
 	/*
     var locationController = require('../controllers/location-controller.js');
@@ -51,32 +52,46 @@ module.exports = function(app) {
         .delete(PatientController.deletePatient);
 
     app.route('/patient/report/:id')
-        .get(PatientController.getPatientReport)
+        .get(PatientController.getPatientReport);
+        
+    app.route('/uploadimage')
+        .post(utilController.uploadimages);
+    
+        // var url = 'mongodb://localhost:27017/abs';        
+        // var MongoClient = require('mongodb').MongoClient;
+        // var assert = require('assert');
+        // var multer = require('multer');
+        // var storage = multer.diskStorage({
+            
+        //     destination: (req, file, cb) => {
+        //       console.log('store multer');
+        //       cb(null, 'public/images/uploads')
+        //     },
+        //     filename: (req, file, cb) => {
+        //         console.log('filename Cb file'+file.filename);
+        //       cb(null, file.fieldname + '-' + Date.now()+"."+file.exten)
+        //     }
+        // });
+        // var upload = multer({storage: storage});
+    // app.route('/upload').post(upload.single('image'), (req, res, next) => {
+    //     console.log('upload method');
+    //    // MongoClient.connect(url, (err, db) => {
+    //         // assert.equal(null, err);
+    //         // insertDocuments(db, 'public/images/uploads/' + req.file.filename, () => {
+    //         //     db.close();
+    //         //     res.json({'message': 'File uploaded successfully'});
+    //         // });
+    //     //});
+    // });
 
-        app.post('/upload', function(req, res) {
-            upload(req,res,function(err){
-                console.log(req.file);
-                if(err){
-                     res.json({error_code:1,err_desc:err});
-                     return;
-                }
-                 res.json({error_code:0,err_desc:null});
-            });
-        });
-
-        var upload = multer({ //multer settings
-            storage: storage
-        }).single('file');
-
-        var storage = multer.diskStorage({ //multers disk storage settings
-            destination: function (req, file, cb) {
-                cb(null, './uploads/');
-            },
-            filename: function (req, file, cb) {
-                var datetimestamp = Date.now();
-                cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
-            }
-        });
+    // var insertDocuments = function(db, filePath, callback) {
+    //     console.log('insert funtion');
+    //     // var collection = db.collection('user');
+    //     // collection.insertOne({'imagePath' : filePath }, (err, result) => {
+    //     //     // assert.equal(err, null);
+    //     //     callback(result);
+    //     // });
+    // };
         
      
 };
