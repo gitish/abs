@@ -5,12 +5,7 @@ exports.uploadimagepostservice = async function(req,res) {
     {
 
         console.log('upload call ');
-           
-            var upload = multer({ //multer settings
-                storage: storage
-            }).single('file');
-
-         var storage = multer.diskStorage({ //multers disk storage settings
+        var storage = multer.diskStorage({ //multers disk storage settings
             destination: function (req, file, cb) {
                 cb(null, './uploads/');
             },
@@ -20,21 +15,18 @@ exports.uploadimagepostservice = async function(req,res) {
             }
         });
         
+        var upload = multer({ //multer settings
+            storage: storage
+        }).single('file');
+
         upload(req,res,function(err){
             console.log(req.file);
             if(err){
-                 res.json({error_code:1,err_desc:err});
-                 return;
+                return res.json({error_code:1,err_desc:err});
+                 
             }
-             res.json({error_code:0,err_desc:null});
+            return res.json({error_code:0,err_desc:null});
         });
-
-        
-        
-        
-        
-            
-        
     }
     catch(e)
     {

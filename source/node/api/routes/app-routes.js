@@ -56,44 +56,6 @@ module.exports = function(app) {
         
     app.route('/uploadimage')
         .post(utilController.uploadimages);
-    
-        // var url = 'mongodb://localhost:27017/abs';        
-        // var MongoClient = require('mongodb').MongoClient;
-        // var assert = require('assert');
-        // var multer = require('multer');
-        // var storage = multer.diskStorage({
-            
-        //     destination: (req, file, cb) => {
-        //       console.log('store multer');
-        //       cb(null, 'public/images/uploads')
-        //     },
-        //     filename: (req, file, cb) => {
-        //         console.log('filename Cb file'+file.filename);
-        //       cb(null, file.fieldname + '-' + Date.now()+"."+file.exten)
-        //     }
-        // });
-        // var upload = multer({storage: storage});
-    // app.route('/upload').post(upload.single('image'), (req, res, next) => {
-    //     console.log('upload method');
-    //    // MongoClient.connect(url, (err, db) => {
-    //         // assert.equal(null, err);
-    //         // insertDocuments(db, 'public/images/uploads/' + req.file.filename, () => {
-    //         //     db.close();
-    //         //     res.json({'message': 'File uploaded successfully'});
-    //         // });
-    //     //});
-    // });
-
-    // var insertDocuments = function(db, filePath, callback) {
-    //     console.log('insert funtion');
-    //     // var collection = db.collection('user');
-    //     // collection.insertOne({'imagePath' : filePath }, (err, result) => {
-    //     //     // assert.equal(err, null);
-    //     //     callback(result);
-    //     // });
-    // };
-        
-     
 };
 
 

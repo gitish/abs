@@ -1,6 +1,6 @@
 var uitlService = require('../services/util.service');
 
-exports.uploadimages = async function(req,res,next)
+exports.uploadimages = async function(req,res)
 {    
     console.log('server request upload image');
     
