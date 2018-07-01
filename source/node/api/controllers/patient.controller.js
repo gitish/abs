@@ -84,5 +84,23 @@ exports.getPatientReport = async function (req, res, next) {
             res.send({ success: true, data: result })
         }
     })
+}
    
+exports.getDoctorList = async function (req, res, next) {
+    var searchData = _.toString(req.params.value)
+    db.collection('doctors').find({
+        $or: [{
+            'name': { '$regex': new RegExp("^" + searchData, "i") }
+        }, {
+            'Specility': { '$regex': new RegExp("^" + searchData, "i") }
+        }, {
+            'Place': { '$regex': new RegExp("^" + searchData, "i") }
+        }]
+    }).toArray(function (err, result) {
+        if (err) {
+            throw err
+        } else {
+            res.send({ success: true, data: result })
+        }
+    })
 }
