@@ -4,8 +4,11 @@ var http = require('http'),
     app = express(),
     mongoose = require('mongoose'),
     passport = require('passport'),
-    bodyParser = require('body-parser')
+    bodyParser = require('body-parser'),
     cors = require('cors');
+
+   
+var multer = require('multer');
 
 mongoose.Promise = global.Promise;
 global._ = require('lodash');
@@ -13,7 +16,6 @@ global.fs = require('fs');
 
 const config = require('./config/database');
 mongoose.connect(config.database,{ useMongoClient: true });
-//mongoose.createConnection(config.database);
 global.db = mongoose.connection;
 
 //check db error
@@ -30,12 +32,14 @@ db.once('open', function() {
 /**
  * Enabling CORS(Cross Origin Resource Sharing) on Node 
  */
-app.use(function(req, res, next) {
+app.use(function(req, res, next) { //allow cross origin requests
+    res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
+    //res.header("Access-Control-Allow-Origin", "http://localhost:4201");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Credentials", true);
     next();
-  });
+});
 
 var help = require("./modules/help/help.js"),
     users = require('./api/models/user.js'),
@@ -76,3 +80,5 @@ finally start the server
 app.listen(app.get('port'), function() {
     console.log('Server listening to port http://localhost:' + app.get('port'));
 });
+
+

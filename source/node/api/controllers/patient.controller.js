@@ -1,20 +1,20 @@
 var PatientService = require('../services/patient.service');
-
 _this = this;
 
 exports.createPatient = async function(req,res,next)
 {
+    
     var patient={
         patientid: req.body.patientid,
         patientname: req.body.patientname,
         email: req.body.email,
-        dob : '2018-03-03T06:32:00.217Z', // req.body.dob,
+        dob :  req.body.dob,
         mobile: req.body.mobile,
         gender: req.body.gender,
         // nationality: req.body.nationality,
         address : req.body.address,
         pin: req.body.pin,
-        image: req.body.image,
+        image: upload(req.body.image),
         FkRegistrationID: req.body.fkRegistrationid
               
     }
@@ -25,7 +25,7 @@ exports.createPatient = async function(req,res,next)
         var createdPatient = await PatientService.createPatient(patient);
         return res.status(201).json({status: 201, data: createdPatient, message: "Succesfully Created Patient"});
     } catch (error) {
-        return res.status(400).json({status: 400, message: "Patient Creation was Unsuccesfull"})
+        return res.status(400).json({status: 400, message: "Patient Creation was Unsuccesfull"});
     }
 }
 

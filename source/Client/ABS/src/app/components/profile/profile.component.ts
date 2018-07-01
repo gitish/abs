@@ -6,7 +6,7 @@ import { ValidateService } from '../../services/validate.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { FormControl, Validators } from '@angular/forms';
-
+import { FileUploader } from 'ng2-file-upload';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -27,6 +27,9 @@ export class ProfileComponent implements OnInit {
   users;
   reports;
   reportFound;
+  files: Object;
+  fileToUpload: File = null;
+  formData: FormData;
   constructor(
     private validateService: ValidateService,
     private authService: AuthService,
@@ -36,24 +39,44 @@ export class ProfileComponent implements OnInit {
     this.showSelected = false;
   }
 
+  public uploader: FileUploader = new FileUploader({url: 'http://localhost:3061/uploadimage'});
   genderArray = [
-    { view: 'Male', value: '0' },
-    { view: 'Female', value: '1' }
+    { view: 'male', value: '0' },
+    { view: 'female', value: '1' }
   ];
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+}
+  onChange(event) {
+    console.log('onChange');
+    this.files = event.srcElement.files;
+    const data = {};
+    // if sending with in file object then it should be req.files.file
+    data['filename'] = event.srcElement.files;
+    this.files = data['filename'];
+    console.log(this.files);
+    console.log(this.files[0].name);
+    // this.service.makeFileRequest('http://localhost:8182/upload', [], files).subscribe(() => {
+    //   console.log('sent');
+    // });
+  }
   onProfileSubmit() {
 
+    this.formData = new FormData();
+    // this.formData.append('fileKey', this.fileToUpload);
+    this.formData.set('fileKey', this.fileToUpload);
     const Profile = {
       patientid: Number(new Date()),
       patientname: this.name,
       email: this.email ? this.email : null,
       mobile: this.mobile,
-      dob: null, // this.dob ? this.dob : null,
+      dob: this.dob ? this.dob : null,
       gender: this.selectedValue ? this.selectedValue : 'male',
       address: this.Address ? this.Address : null,
       pin: this.Pin ? this.Pin : null,
-      image: this.Image ? this.Image : null,
+      image: this.formData ? this.formData : null,
       dateofupdate: new Date(),
-      fkRegistrationid: Number(12245545486) // this.user.userId ? this.user.userId :
+      fkRegistrationid: Number(1520059986631) // this.user.userId ? this.user.userId :
     };
 
     // validate profile field

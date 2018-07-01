@@ -2,11 +2,12 @@
  * Created by sshail on 03/06/2017.
  */
 'use strict';
-
+var multer = require('multer');
 module.exports = function(app) {
     var userController = require('../controllers/user-controller.js');
     var drController = require('../controllers/dr-controller.js');
     var PatientController = require('../controllers/patient.controller');
+    var utilController = require('../controllers/util.controller');
     const passport = require('passport');
 	/*
     var locationController = require('../controllers/location-controller.js');
@@ -51,10 +52,18 @@ module.exports = function(app) {
         .delete(PatientController.deletePatient);
 
     app.route('/patient/report/:id')
+<<<<<<< HEAD
+        .get(PatientController.getPatientReport);
+        
+    app.route('/uploadimage')
+        .post(utilController.uploadimages);
+};
+=======
         .get(PatientController.getPatientReport)
 
     app.route('/patient/doctor/:value')
         .get(PatientController.getDoctorList)
+>>>>>>> master
 
 };
 

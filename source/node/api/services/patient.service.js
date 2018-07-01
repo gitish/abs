@@ -24,7 +24,7 @@ exports.createPatient = async function (patient) {
     {
         console.log('Before save : ');
         console.log(newPatient);
-        var savePatient = await newPatient.save()
+        var savePatient = await newPatient.save();
         return savePatient;
     }
     catch(e)
@@ -83,3 +83,4 @@ exports.deletePatient = async function (patientId) {
         throw Error('Error Occured while deleting the patient'+e.message);
     }
 }
+
