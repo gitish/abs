@@ -52,18 +52,12 @@ module.exports = function(app) {
         .delete(PatientController.deletePatient);
 
     app.route('/patient/report/:id')
-<<<<<<< HEAD
         .get(PatientController.getPatientReport);
         
     app.route('/uploadimage')
-        .post(utilController.uploadimages);
-};
-=======
-        .get(PatientController.getPatientReport)
+        .post(utilController.uploadimages)
+        .get(PatientController.getPatientReport);
 
     app.route('/patient/doctor/:value')
-        .get(PatientController.getDoctorList)
->>>>>>> master
-
-};
-
+        .get(PatientController.getDoctorList);
+}
